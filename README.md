@@ -1,7 +1,6 @@
 # NIMBUS-SASS 
 Anthem Approved CSS Styling
 
-
 # Build Overview:
 
 Any branch mathing feature/ will invoke a build plan in Bamboo: http://bamboo.oss.antheminc.com/browse/NIMBUS-NMSAS
