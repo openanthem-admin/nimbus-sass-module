@@ -1,0 +1,79 @@
+$headerHeight: 100px;
+$header-bkg: #2667c1;
+$header-userIcon-height: 3.3rem;
+$header-faIcon-size: 3.3rem;
+$header-search-bkg: rgb(51, 121, 190);
+$header-btn-height: 55px;
+$header-dropdown-marginTop: 6px;
+
+
+$primary-1:#006BC2;
+$primary-2:#669fe2;
+$primary-3:#edf7ff;
+$primary-4:#4c4c4c;
+$primary-5: #e5991c;
+$primary-6: #9dd3f7;
+
+$secondary-1: #014b87;
+$secondary-2: #d9edfd;
+$secondary-3: #b8d4e8;
+$secondary-4: #b9b6b6;
+$secondary-5: #ebebeb;
+$secondary-6: #5aa00d;
+
+$tertiary-1: #94acbc;
+$tertiary-2: #e8e5e5;
+$tertiary-3: #b8e986;
+$tertiary-4: #ae0015;
+$tertiary-5: #f4c70f;
+$tertiary-6: #fcf6d9;
+
+
+
+$iconColor: #e19926;
+$text-grey-lite: #959595;
+
+$toolbar-height: 123px;
+$globalNav-height: 30px;
+$globalNav-background-color:#333;
+$globalNav-font-color: #fff;
+
+
+$sidebar: #034b7c;
+
+$focus-outline-setting: #8FBEE6 solid 2px;
+$footer-bkg : #343a40;
+$footer-height-nimbus: 120px;
+$footer-color : #fff;
+
+$border-color: #bbd3e8;
+$border-color-dark: darken($border-color, 50%);
+$border-color-light: lighten($border-color, 30%);
+
+
+$bg-alternate-color-odd: #fff;
+$bg-alternate-color-even: #e6e6e6;
+
+
+$goGreen: #599E63;
+$mecury:#E6E6E6;
+$silverChalice:#aaaaaa;
+
+// To override Bootstrap mixins of grid.scss
+// .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, 
+.col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, 
+.col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, 
+.col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, 
+.col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+    float: none !important;
+    display: inline-block !important;
+    margin: 0 -0.125em;
+}
+
+// .col-xs-12 {
+//     margin: 0 0; //override correction for inline-block fix
+// }
+
+[hidden]{
+    display: none !important;
+}

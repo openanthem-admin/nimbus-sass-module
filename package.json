@@ -1,0 +1,35 @@
+{
+  "name": "nimbus-sass-module",
+  "version": "1.12.0-0",
+  "description": "",
+  "main": "",
+  "devDependencies": {
+    "bootstrap": "4.1.3",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "4.8.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "popper.js": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openanthem/nimbus-sass-module"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified for the project.\" && exit 1",
+    "build": "npm run clean && webpack -p",
+    "clean": "rimraf ./dist/*"
+  },
+  "author": "Barta, Bruce",
+  "license": "Apache License, Version 2.0"
+}
