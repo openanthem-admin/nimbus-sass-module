@@ -3,9 +3,9 @@ Anthem Approved CSS Styling
 
 # Build Overview:
 
-Any branch mathing feature/ will invoke a build plan in Bamboo: http://bamboo.oss.antheminc.com/browse/NIMBUS-NMSAS
+Any branch matching "feature/" will invoke a build plan in Bamboo: http://bamboo.oss.antheminc.com/browse/NIMBUS-NMSAS
 
-The results of a feature/ build will be an attached artifact.  This is a packed npm module, and can be installed as such for testing.
+The results of a "feature/" build will be an attached artifact.  This is a packed npm module, and can be installed as such for testing.
 
 * Merges into develop branch
 All merges into the develop branch will have:
