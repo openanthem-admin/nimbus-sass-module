@@ -3,15 +3,12 @@ Anthem Approved CSS Styling
 
 # Build Overview:
 
-Any branch matching "feature/" will invoke a build plan in Bamboo: http://bamboo.oss.antheminc.com/browse/NIMBUS-NMSAS
+* Any new branch matching a valid version, will
+1. Get a build plan created under nimbus-sass-modules in Bamboo.
+2. Will increment patch version
+3. Publish to npmjs.org as @next
+4. Tag repository with new version.
 
-The results of a "feature/" build will be an attached artifact.  This is a packed npm module, and can be installed as such for testing.
-
-* Merges into develop branch
-All merges into the develop branch will have:
-1. Patch version incremented.
-2. Published as @next to npm.js/nimbus-sass-module
-3. Packed npm artifact will also be included on Bamboo build
 
 * Merges into master branch
 All merges into the master branch will have: 
