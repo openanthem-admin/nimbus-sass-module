@@ -123,10 +123,6 @@ button:focus{
     }
 }
 
-
-
-
-
 .btn.btn-icon, .icon-holder {
     padding: 0;
     background: transparent;
@@ -140,14 +136,8 @@ button:focus{
   }
   &:hover{
     color: $primary-5;
-    
-
   }
-  
-  
 }
-
-
 
 .fa-icon-link {
   position:relative;
@@ -160,9 +150,7 @@ button:focus{
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
- padding:6px;
-
-  
+  padding:6px;
   .tag {
     background-color: transparent;
     position: absolute;
@@ -178,8 +166,6 @@ button:focus{
     font-weight: 100;
     padding: .1rem .3rem 0rem;
     z-index: 1;
-  
-
   }
   i {
       font-size: 30px;
