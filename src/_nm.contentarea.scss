@@ -23,7 +23,37 @@ canvas.form-control {
         left: 620px;
     }
 }
+.cardBody{
+    margin-bottom: 1rem;
+}
 
+.borderCard{
+    @extend .border-all;
+    padding: 1rem;
+}
+
+.toggleCard{
+    position: relative;
+    @extend .border-all;
+    padding: 1rem 1rem 1rem 3rem;
+    overflow: hidden;
+
+    .toggleTrigger{    
+        font-size: 2rem;
+        position: absolute;
+        top: 8px;
+        left: 6px;
+    
+    
+        &::before {
+            font-family: "FontAwesome";
+            content: "\f0da";   
+        }
+    }
+    &.openPanel .toggleTrigger:before {
+        content: "\f0d7";
+    }
+}
 
 .displayNone{display:none;}
 .underline {
