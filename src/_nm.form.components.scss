@@ -554,3 +554,42 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     background-position: center center;
     background-size: 50% 50%;
 }
+
+.ui-picklist {
+    .ui-picklist-listwrapper {
+        border: 1px solid grey;
+    }
+    .ui-picklist-caption {
+        text-align: left;
+    }
+    .ui-picklist-filter-container {
+        background-color: #fcf6d9;
+        .ui-picklist-filter {
+            padding-right: 40px;
+        }
+        span {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: #006bc2;
+        }
+    }
+    .ui-picklist-list {
+      
+        .ui-picklist-item{
+            margin-bottom: .1rem;
+      
+            &:not(.ui-state-disabled):not(.ui-state-highlight):hover {
+                background-color: #ebebeb;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #4c4c4c;
+            }
+            &.ui-state-active{
+                background-color: #d9edfd;
+
+            }
+        }
+    }
+}
