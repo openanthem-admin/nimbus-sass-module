@@ -100,11 +100,13 @@
             }
         }
         .dropdownContent{
-            max-height: 0;
-            min-height: 0;
+            // max-height: 0;
+            // min-height: 0;
+            height: auto;
+            width: auto;
             background: #eee;
             overflow-y: auto;
-            min-width: 130%;
+            // min-width: 130%;
             position: absolute;
             z-index: 2;
             transition: all .4s;
