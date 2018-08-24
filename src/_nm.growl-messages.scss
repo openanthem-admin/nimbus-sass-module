@@ -1,0 +1,25 @@
+.ui-toast {
+    .ui-toast-message { 
+        color: #fff;
+        &.ui-toast-message-warn {
+            background-color: #FFB300;
+            border-color: #FFB300;
+        }
+        &.ui-toast-message-info{
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
+        &.ui-toast-message-error {
+            background-color: #f44336;
+            border-color: #f44336;
+        }
+        &.ui-toast-message-success {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+    }
+    .ui-toast-close-icon, .ui-toast-close-icon:hover {
+            color: #fff;
+            text-decoration: none;
+    }
+}
