@@ -1,6 +1,5 @@
 //clean up svg with SVGOMG - remove unwanted elements in svg -- jakearchibald.github.io/svgomg/
-//make all " to ' in svg to correct IE issue with encoding
-// encode svg removing spaces with url encoder -- like www.urlencoder.org
+// encode svg converting special chars and all " to ' in with url encoder -- like https://yoksel.github.io/url-encoder/
 // paste encode url in mask-image -- url("data:image/svg+xml,|---paste encoded svg here---|"
 //use mask-image to have icon change color base on class or hover
 // use background-image to place static svg with color spec'd in svg file
@@ -32,7 +31,7 @@ h1.svgIcon::before{
         background-color: $tertiary-4;
     }
     
-   
+   // these examples were fully encoded removing all spaces actually makes larger file... this full encode works, but is not ideal. see notes above https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
     &.activity:before {
         mask-image: url("data:image/svg+xml,%3Csvg%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2040%27%3E%3Cg%20fill%3D%27%23currentColor%27%3E%3Cpath%20d%3D%27M19.5%206.4c-1.8.1-3.4-1.3-3.5-3-.1-1.8%201.3-3.3%203.2-3.4%201.8-.1%203.4%201.3%203.5%203%200%201.8-1.4%203.3-3.2%203.4zM24.5%2018.2l-.4-6.5%203.3%202c.6.3.9.9.9%201.6v4.3c0%20.9.7%201.6%201.6%201.6.9%200%201.6-.7%201.6-1.6v-4.7c0-1.3-.7-2.5-1.8-3.1l-6.6-4c-.4-.2-.9-.3-1.3-.2l-4.6%201c-.3.1-.5.3-.5.6l.6%2012.4-3.9%205.2c-.2.2-.4.7-.5%201.2l-2%209.7c-.2%201.2.6%202.2%201.8%202.2.9%200%201.6-.6%201.8-1.5l2.2-9.7c.1-.3.2-.6.4-.8l6.8-8.1c.4-.4.6-1%20.6-1.6z%27%2F%3E%3Cpath%20d%3D%27M15.9%2014.9l-.3-4.3-6.7%206.8c-.6.6-.6%201.5%200%202.1.6.6%201.5.6%202.1.1l4.9-4.7zM24.3%2021.7l-3.7%204.4.4%204.2c.1.6.4%201.2.9%201.7l6.3%205.3c.9.8%202.3.6%203-.4.6-.9.4-2-.4-2.7L25%2029.5c-.1-.1-.2-.3-.2-.5l-.5-7.3z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2040%27%3E%3Cg%20fill%3D%27%23currentColor%27%3E%3Cpath%20d%3D%27M19.5%206.4c-1.8.1-3.4-1.3-3.5-3-.1-1.8%201.3-3.3%203.2-3.4%201.8-.1%203.4%201.3%203.5%203%200%201.8-1.4%203.3-3.2%203.4zM24.5%2018.2l-.4-6.5%203.3%202c.6.3.9.9.9%201.6v4.3c0%20.9.7%201.6%201.6%201.6.9%200%201.6-.7%201.6-1.6v-4.7c0-1.3-.7-2.5-1.8-3.1l-6.6-4c-.4-.2-.9-.3-1.3-.2l-4.6%201c-.3.1-.5.3-.5.6l.6%2012.4-3.9%205.2c-.2.2-.4.7-.5%201.2l-2%209.7c-.2%201.2.6%202.2%201.8%202.2.9%200%201.6-.6%201.8-1.5l2.2-9.7c.1-.3.2-.6.4-.8l6.8-8.1c.4-.4.6-1%20.6-1.6z%27%2F%3E%3Cpath%20d%3D%27M15.9%2014.9l-.3-4.3-6.7%206.8c-.6.6-.6%201.5%200%202.1.6.6%201.5.6%202.1.1l4.9-4.7zM24.3%2021.7l-3.7%204.4.4%204.2c.1.6.4%201.2.9%201.7l6.3%205.3c.9.8%202.3.6%203-.4.6-.9.4-2-.4-2.7L25%2029.5c-.1-.1-.2-.3-.2-.5l-.5-7.3z%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
@@ -59,6 +58,7 @@ h1.svgIcon::before{
     }
   
 }
+//example of css template for new classes/images
 
 .svgIcon.newImage:before {
     mask-image: url("data:image/svg+xml,%3Csvg%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2040%27%3E%3Cpath%20d%3D%27M37%2012c.6%200%201%20.4%201%201v22c0%20.6-.4%201-1%201H3c-.6%200-1-.4-1-1V13c0-.6.4-1%201-1h34m0-2H3c-1.7%200-3%201.3-3%203v22c0%201.7%201.3%203%203%203h34c1.7%200%203-1.3%203-3V13c0-1.7-1.3-3-3-3z%27%20fill%3D%27currentColor%27%2F%3E%3Cpath%20d%3D%27M25%204c.6%200%201%20.4%201%201v5H12V5c0-.6.4-1%201-1h12m0-2H13c-1.7%200-3%201.3-3%203v7h18V5c0-1.7-1.3-3-3-3zM17%2017h5v5h5v5h-5v5h-5v-5h-5v-5h5z%27%20fill%3D%27currentColor%27%2F%3E%3C%2Fsvg%3E");

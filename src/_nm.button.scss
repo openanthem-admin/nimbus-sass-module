@@ -121,13 +121,17 @@ button:focus{
       height: 1.4rem;
       margin-right: .6rem;
     }
+   i,.fa {
+      font-size: 1.5rem;
+        margin-right: .3rem;
+    }
 }
 
 .btn.btn-icon, .icon-holder {
     padding: 0;
     background: transparent;
     color:#006bc2;
-    i {
+    i, .fa {
       font-size: 1.5rem;
     }
     svg {

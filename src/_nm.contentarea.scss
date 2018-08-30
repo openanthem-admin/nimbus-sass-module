@@ -78,6 +78,7 @@ body{
 .text-bold {
     font-weight: bold;
 }
+
 .ui-table .ui-table-thead > tr > th > span.overflowVisible,.overflowVisible {
     overflow: visible;
 }
@@ -329,9 +330,8 @@ svg.logo {
     color: $primary-4;
     font-size: 1.09rem;
     min-height: 60px;
-    padding: .6rem;
     margin: 0 0px 10px 0;
-    width: calc(95% + .4rem);
+    width: calc(95% + 1rem);
     nm-subheader {
         margin-bottom: .5rem;
         display: block;
@@ -375,16 +375,14 @@ svg.logo {
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
-.panel-body {
-    background: #fff;
-    border: 1px solid $primary-6;
-}
+
 .card-holder {
     position:relative;
     vertical-align: top;
     // margin-top: 1rem;
     padding-right: 0;
     .card-header{
+        padding: 0;
         margin-bottom: 0;
         background: none;
         border-bottom: none;
@@ -419,19 +417,37 @@ svg.logo {
 .smallCard,
 .mediumCard,
 .largeCard.withBorder {
-    margin-top: 1rem;
-    margin-bottom: 0px;
-    .card-header {
-        @extend .border-right;
-        @extend .border-top;
-        @extend .border-left;
-    }
-    .card-block {
-        @extend .border-right;
-        @extend .border-bottom;
-        @extend .border-left;
-        
-    }
+        border: 1px solid $secondary-4;   
+        padding: 1rem ;
+}
+.XsmallCard{
+    @extend .col-sm-6;
+    @extend .col-md-3;
+}
+.smallCard{
+    @extend .col-sm-6;
+    @extend .col-md-4;
+}
+.mediumCard{
+    @extend .col-sm-6;
+}
+.largeCard{
+    @extend .col-12;
+}
+.largeCard.withBorder{
+    @extend .col-sm-12;
+}
+.XsmallCard .card-block, 
+.smallCard .card-block, 
+.mediumCard .card-block, 
+.largeCard.withBorder .card-block {
+    padding: 0 .5rem .5rem .5rem;
+}
+.XsmallCard .card-header, 
+.smallCard .card-header, 
+.mediumCard .card-header, 
+.largeCard.withBorder .card-header {
+    padding: .5rem .5rem 0 .5rem;
 }
 .mediumCard .ui-paginator-top {
     display: none;
@@ -656,6 +672,7 @@ $answerWidth: 99%-$questionWidth;
 }
 .section-nav{
     margin-left: 0;
+    margin-right: 1rem;
    .nav-link::before{
         color: inherit;
     }
@@ -888,12 +905,17 @@ button.ui-datepicker-trigger.ui-calendar-button {
         border-bottom-right-radius: 0px;
     }
     .ui-panelmenu-header .ui-state-active, 
-    .ui-panelmenu-header a:hover , 
-    .ui-panelmenu-header.ui-state-active a  {
+    .ui-panelmenu-header.ui-state-active a.ui-panelmenu-header-link,
+    .ui-panelmenu .ui-panelmenu-header a.ui-panelmenu-header-link.ui-state-active:hover  {
         background: $primary-5;
         border-color: $primary-5;
         color: #fff;
     
+    }
+    .ui-panelmenu-header a.ui-panelmenu-header-link:hover  {
+        background: $primary-4;
+        border-color: $primary-4;
+        color: #fff;
     }
     .ui-menuitem-icon {
         font-size: 1.4rem;
@@ -1041,15 +1063,15 @@ button.ui-datepicker-trigger.ui-calendar-button {
 
 
 .border-all{
-    border: 1px solid $border-color-dark;
+    border: 1px solid $border-color;
 }.border-right{
-    border-right: 1px solid $border-color-dark;
+    border-right: 1px solid $border-color;
 }.border-top{
-    border-top: 1px solid $border-color-dark;
+    border-top: 1px solid $border-color;
 }.border-left{
-    border-left: 1px solid $border-color-dark;
+    border-left: 1px solid $border-color;
 }.border-bottom{
-    border-bottom: 1px solid $border-color-dark;
+    border-bottom: 1px solid $border-color;
 }
 .checkBoxCard{
     border: 1px solid #000;
@@ -1104,7 +1126,11 @@ p-accordiontab p-header h2 {
     font-size: 1.2rem
 }
 
-
+.panel-body {
+    background: #fff;
+    border: 1px solid $primary-6;
+    padding:1rem;
+}
 //accordion styles
 
 .ui-accordion-header a:hover {

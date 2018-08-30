@@ -61,7 +61,9 @@ label.custom-control.required{
     width: calc(100% - 2.5rem);
     max-width: calc(600px - 2.5);
 }
-
+.ui-calendar .ui-clickable.pi.pi-calendar {
+    font-size: 2.5rem;
+}
 //for custom radio and checkbox
 .custom-control-indicator {
     border: 1px solid $border-color;
@@ -169,6 +171,9 @@ textarea.form-control {
     width: 1rem;
     margin-top: .2rem;
     vertical-align: top;
+}
+nm-input-radio {
+    width: 100%;
 }
 fieldset.subquestion {
     padding: 1rem 0 0 2rem;
