@@ -29,7 +29,10 @@
         border: 1px solid $primary-2;
         margin-bottom: 1rem;
         .ui-accordion-content{
-            padding: 0;
+            padding: 1rem;
+            .cardBody{
+                padding: 0;
+            }
         }
     }
   
