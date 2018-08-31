@@ -61,7 +61,9 @@ label.custom-control.required{
     width: calc(100% - 2.5rem);
     max-width: calc(600px - 2.5);
 }
-
+.ui-calendar .ui-clickable.pi.pi-calendar {
+    font-size: 2.5rem;
+}
 //for custom radio and checkbox
 .custom-control-indicator {
     border: 1px solid $border-color;
@@ -112,7 +114,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding-left: 0;
   p {
       margin-bottom: 0;
@@ -169,6 +171,9 @@ textarea.form-control {
     width: 1rem;
     margin-top: .2rem;
     vertical-align: top;
+}
+nm-input-radio {
+    width: 100%;
 }
 fieldset.subquestion {
     padding: 1rem 0 0 2rem;
@@ -376,7 +381,9 @@ p-dropdown.form-control {
 .form-group.questionGroup .ui-calendar input { 
     max-width: calc(300px - 2.5rem);
 }
-
+.ui-inputtext { 
+    padding: .5rem;
+}
 
 // custom radio
 
