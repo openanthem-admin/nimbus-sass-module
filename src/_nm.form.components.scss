@@ -114,7 +114,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding-left: 0;
   p {
       margin-bottom: 0;
@@ -381,7 +381,9 @@ p-dropdown.form-control {
 .form-group.questionGroup .ui-calendar input { 
     max-width: calc(300px - 2.5rem);
 }
-
+.ui-inputtext { 
+    padding: .5rem;
+}
 
 // custom radio
 

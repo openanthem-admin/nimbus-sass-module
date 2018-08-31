@@ -28,6 +28,9 @@
     .ui-accordion-content-wrapper {
         border: 1px solid $primary-2;
         margin-bottom: 1rem;
+        .ui-accordion-content{
+            padding: 0;
+        }
     }
   
 }

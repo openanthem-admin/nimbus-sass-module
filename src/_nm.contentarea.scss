@@ -29,7 +29,6 @@ canvas.form-control {
 }
 
 .cardBody{
-    margin-bottom: 1rem;
     padding: 1rem;
 }
 
@@ -191,9 +190,8 @@ h4, h5, h6{
 }
 
 h1.page-title {
-    margin-bottom:0;
+    margin-bottom:1rem;
     font-size: 1.69rem;
-    margin-left:10px;
     font-weight: 400;
     &::before{
         font-size: 1.9rem;
@@ -289,40 +287,43 @@ svg.logo {
         margin: 0 1rem;
     }
 
-.breadcrumb-bar{
-    padding: 0.5rem;
-    background: #fff;
-    ol{
-        margin-bottom: 0;
-    }
-    .breadcrumb-item{
-        // font-size: 1rem;
-        &> a{
+.breadcrumb {
+    padding: 0;
+    .breadcrumb-bar{
+        padding: 0.5rem;
+        background: #fff;
+        ol{
+            margin-bottom: 0;
+        }
+        .breadcrumb-item{
+            // font-size: 1rem;
+            &> a{
+                text-decoration: none;
+            }
+            &> a:hover{
+                text-decoration: underline;
+                color: $primary-5;
+            }
+        }
+        .breadcrumb-item + .breadcrumb-item::before{
+            padding-right: .7rem;
+            font-size: 1.5rem;
+            margin-top: -6px;
+            padding-left: 1.2rem;
+        }
+        .breadcrumb-item:last-child > a {
             text-decoration: none;
+            color: #0275d8;
+            cursor: default;
         }
-        &> a:hover{
+        .breadcrumb-item>a {
+            text-decoration: none;
+            color: #373a3c;
+        }    
+        .breadcrumb-item>a:hover:not(:last-child) {
             text-decoration: underline;
-            color: $primary-5;
+            color: #e5991c;
         }
-    }
-    .breadcrumb-item + .breadcrumb-item::before{
-        padding-right: .7rem;
-        font-size: 1.5rem;
-        margin-top: -6px;
-        padding-left: 1.2rem;
-    }
-    .breadcrumb-item:last-child > a {
-        text-decoration: none;
-        color: #0275d8;
-        cursor: default;
-    }
-    .breadcrumb-item>a {
-        text-decoration: none;
-        color: #373a3c;
-    }    
-    .breadcrumb-item>a:hover:not(:last-child) {
-        text-decoration: underline;
-        color: #e5991c;
     }
 }
 .info-bar {
@@ -466,8 +467,11 @@ svg.logo {
     font-family: "Lucida Sans Unicode", "Lucida Grande", san-serif;
     font-size: 1rem;
 }
+.ui-widget-content{
+    color : $primary-4;
+}
 .ui-widget-content a {
-    color: #0275d8;
+    color: $primary-1;
 }
 .ui-datepicker.ui-widget-content a {
     color: #696b6c;
@@ -476,6 +480,12 @@ svg.logo {
     word-break: break-word;
 }
 //card-details-field alignment
+.label-left{
+    margin-bottom : 0;
+}
+.label-left .form-group {
+    margin-bottom: 0;
+}
 .label-left.align-right label {
     text-align: right;
 }
@@ -906,7 +916,7 @@ button.ui-datepicker-trigger.ui-calendar-button {
     }
     .ui-panelmenu-header .ui-state-active, 
     .ui-panelmenu-header.ui-state-active a.ui-panelmenu-header-link,
-    .ui-panelmenu .ui-panelmenu-header a.ui-panelmenu-header-link.ui-state-active:hover  {
+    .ui-panelmenu-header a.ui-panelmenu-header-link.ui-state-active:hover  {
         background: $primary-5;
         border-color: $primary-5;
         color: #fff;

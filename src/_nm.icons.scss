@@ -10,14 +10,54 @@ button.svgIcon:hover{
         background-color: $primary-5;
     }
 }
+h1.fa {
+    font-size: 2rem;
+    display: block;
+    font-family: inherit;
+}
+
+h2.fa {
+    font-size: 1.8rem;
+    display: block;
+    font-family: inherit;
+}
+h3.fa {
+    font-size: 1.6rem;
+    display: block;
+    font-family: inherit;
+}
+
+h1.fa:before,
+h2.fa:before,
+h3.fa:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: .8rem;
+}
 h1.svgIcon::before{
     width: 30px;
     height: 30px;
+    background-color: $primary-4;
+    margin-right: .8rem;
 }
+
 h2.svgIcon::before{
     width: 30px;
     height: 30px;
+    background-color: $primary-4;
+    margin-right: .8rem;
 }
+h3.svgIcon::before{
+    width: 30px;
+    height: 30px;
+    background-color: $primary-4;
+    margin-right: .8rem;
+}
+
 .scrollGrid .svgIcon::before{ 
     margin-left: calc(30% - .8rem);
 }
