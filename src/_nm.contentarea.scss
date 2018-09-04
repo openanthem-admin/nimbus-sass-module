@@ -86,6 +86,10 @@ html {
     line-height: 15px;
     color: $primary-4;
 }
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", san-serif;
+    font-size: 1rem;
+}
 //type styles from style guide
 
 h1{
@@ -800,6 +804,9 @@ $answerWidth: 99%-$questionWidth;
 }
 .ui-state-default {
     border: 1px solid $secondary-4;
+}
+.ui-inputtext{
+    padding: .375rem .75rem;
 }
 .ui-inputtext:enabled:hover {
     border-color: #9dd3f7;

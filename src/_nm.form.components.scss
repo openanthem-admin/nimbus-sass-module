@@ -13,7 +13,8 @@ fieldset:focus{
     outline: none;
   }
 .form-control{
-	border-color: $secondary-4;
+    border-color: $secondary-4;
+    border-radius: 0;
 }
 .form-group.required label:after, label.required:after {
     content: "*";
