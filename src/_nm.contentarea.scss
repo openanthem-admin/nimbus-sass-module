@@ -490,7 +490,7 @@ svg.logo {
     text-align: right;
 }
 .label-left label {
-    width: calc(50% - .6rem);
+    width: 50%;
     display: inline-block;
     line-height: 1.2rem;
     padding-right: .6rem;
@@ -499,6 +499,13 @@ svg.logo {
     width: 50%;
     display: inline-block;
     line-height: 1.2rem;
+}
+.label-left.col-12,
+.label-left.col-sm-12,
+.label-left.col-sm-6,
+.label-left.col-sm-4,
+.label-left.col-sm-3{
+    margin-bottom: 0; 
 }
 
 // for assessment questions
@@ -885,6 +892,15 @@ button.ui-datepicker-trigger.ui-calendar-button {
 // }
 
 
+.section-nav {
+    width: 100%;
+}
+
+.navbar-toggler-icon::before{
+@extend .svgIcon;
+@extend .add-note;
+}
+
 //changes for nav prime ng widget
 .ui-panelmenu  {
     .ui-menuitem-text {
@@ -1270,6 +1286,32 @@ p-accordiontab p-header h2 {
 
 // screen breaks below
 @media screen and (min-width: 576px) {
+    .section-nav {
+        width: auto;
+    }
+    .ui-menuitem-text {
+
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+        opacity: 0;
+        -webkiit-transition: opacity 300ms;
+        transition: opacity 300ms;
+    }
+    .ui-panelmenu-header-link {
+        min-height: 34px;
+        
+    }
+    .ui-panelmenu{
+        width: 36px;
+        -webkiit-transition: width 300ms;
+        transition: width 300ms;
+    }
     .navbar-toggleable-md .navbar-collapse {
         z-index: 1;
         position: absolute;
@@ -1309,15 +1351,35 @@ p-accordiontab p-header h2 {
     //     line-height: 18px;
     // }
     //nav bar hiding methods...  
-    .navbar-toggleable-md .navbar-toggler {
-        display: none;
+    // .navbar-toggleable-md .navbar-toggler {
+    //     display: none;
+    // }
+    // .navbar-toggleable-md .navbar-collapse {
+    //     display: block;
+    //     width: 100%;
+    //     position: static;  
+    // }
+    .ui-menuitem-text {
+
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        clip: auto;
+        border: 0;
+        opacity: 1;
     }
-    .navbar-toggleable-md .navbar-collapse {
-        display: block;
-        width: 100%;
-        position: static;  
+    .ui-panelmenu-header-link {
+        min-height: 34px;
+       
     }
-  
+    .ui-panelmenu{
+        width: auto;
+        -webkiit-transition: width 300ms;
+        transition: width 300ms;
+    }
   .info-card{
       width: 82%;
   }
