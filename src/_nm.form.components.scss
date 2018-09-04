@@ -383,7 +383,9 @@ p-dropdown.form-control {
     max-width: calc(300px - 2.5rem);
 }
 .ui-inputtext { 
-    padding: .5rem;
+    
+        padding: .375rem .75rem;
+    line-height: 1.5rem;
 }
 
 // custom radio
