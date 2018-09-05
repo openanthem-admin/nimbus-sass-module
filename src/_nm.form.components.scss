@@ -655,6 +655,11 @@ nm-input-switch{
         margin-top: .2rem;
         max-width: calc(100% - 60px);
     }
+    &::before{
+        display: block;
+        content: "";
+        clear: both;
+    }
     p-inputswitch {
         margin-left: .5rem;
         &.left{
@@ -662,30 +667,34 @@ nm-input-switch{
             margin-right: .5rem;
             float: left;
         }
+        &.right{
+           
+            float: right;
+        }
         //unselected circle
-        .ui-inputswitch-slider:before {
+        .ui-inputswitch .ui-inputswitch-slider:before {
             background-color: #ccc;
         }
         //regular
-        .ui-inputswitch-slider {
+        .ui-inputswitch .ui-inputswitch-slider {
             transition: background-color .3s, box-shadow .2s;
             background: white;
             border: 1px solid #ccc;
         }
         //hover
-        &:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+        .ui-inputswitch:not(.ui-state-disabled):hover .ui-inputswitch-slider {
             background-color: #b7b7b7;
         }
        
         //selected
-        &.ui-inputswitch-checked .ui-inputswitch-slider {
+        .ui-inputswitch.ui-inputswitch-checked .ui-inputswitch-slider {
             background-color: #186ba0;
         }
-        &.ui-inputswitch-checked .ui-inputswitch-slider:before {
+        .ui-inputswitch.ui-inputswitch-checked .ui-inputswitch-slider:before {
             background-color: #fff;
         }
         //hover of selected
-        &.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+        .ui-inputswitch.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
             background-color: #114d74;
         }
     }
