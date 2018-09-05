@@ -648,3 +648,46 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
         }
     }
 }
+
+nm-input-switch{
+    label {
+        margin-bottom: 0;
+        margin-top: .2rem;
+        max-width: calc(100% - 60px);
+    }
+    p-inputswitch {
+        margin-left: .5rem;
+        &.left{
+            margin-left: 0;
+            margin-right: .5rem;
+            float: left;
+        }
+        //unselected circle
+        .ui-inputswitch-slider:before {
+            background-color: #ccc;
+        }
+        //regular
+        .ui-inputswitch-slider {
+            transition: background-color .3s, box-shadow .2s;
+            background: white;
+            border: 1px solid #ccc;
+        }
+        //hover
+        &:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+            background-color: #b7b7b7;
+        }
+       
+        //selected
+        &.ui-inputswitch-checked .ui-inputswitch-slider {
+            background-color: #186ba0;
+        }
+        &.ui-inputswitch-checked .ui-inputswitch-slider:before {
+            background-color: #fff;
+        }
+        //hover of selected
+        &.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+            background-color: #114d74;
+        }
+    }
+
+} 
