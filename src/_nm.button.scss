@@ -109,12 +109,14 @@ button:focus{
     line-height:1.5;
     &:hover,
     &:active,
-    &.active{
+    &.active,
+    &:focus{
       color: $primary-5;
       background: none;
     }
     &:focus{
-      outline: $focus-outline-setting;
+      outline: none;
+      box-shadow: none;
     }
     svg {
       width: 1.4rem;
@@ -138,8 +140,15 @@ button:focus{
       width: 2rem;
       height: 2rem;
   }
-  &:hover{
+  &:hover,
+  &.active,
+  &:focus{
     color: $primary-5;
+    background: none;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: none;
   }
 }
 
