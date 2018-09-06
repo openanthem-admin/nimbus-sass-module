@@ -13,7 +13,8 @@ fieldset:focus{
     outline: none;
   }
 .form-control{
-	border-color: $secondary-4;
+    border-color: $secondary-4;
+    border-radius: 0;
 }
 .form-group.required label:after, label.required:after {
     content: "*";
@@ -61,7 +62,9 @@ label.custom-control.required{
     width: calc(100% - 2.5rem);
     max-width: calc(600px - 2.5);
 }
-
+.ui-calendar .ui-clickable.pi.pi-calendar {
+    font-size: 2.5rem;
+}
 //for custom radio and checkbox
 .custom-control-indicator {
     border: 1px solid $border-color;
@@ -112,7 +115,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     padding-left: 0;
   p {
       margin-bottom: 0;
@@ -169,6 +172,9 @@ textarea.form-control {
     width: 1rem;
     margin-top: .2rem;
     vertical-align: top;
+}
+nm-input-radio {
+    width: 100%;
 }
 fieldset.subquestion {
     padding: 1rem 0 0 2rem;
@@ -376,7 +382,11 @@ p-dropdown.form-control {
 .form-group.questionGroup .ui-calendar input { 
     max-width: calc(300px - 2.5rem);
 }
-
+.ui-inputtext { 
+    
+        padding: .375rem .75rem;
+    line-height: 1.5rem;
+}
 
 // custom radio
 
@@ -554,3 +564,139 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     background-position: center center;
     background-size: 50% 50%;
 }
+
+.ui-picklist {
+    .ui-picklist-listwrapper {
+        border: 1px solid grey;
+    }
+    .ui-picklist-caption {
+        text-align: left;
+    }
+    .ui-picklist-filter-container {
+        background-color: #fcf6d9;
+        .ui-picklist-filter {
+            padding-right: 40px;
+        }
+        span {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            color: #006bc2;
+        }
+    }
+    .ui-picklist-list {
+        .ui-picklist-item{
+            margin-bottom: .1rem;
+            padding: .5rem;
+            background-color: $secondary-5;
+            color: $primary-4;      
+            &:not(.ui-state-disabled):not(.ui-state-highlight):hover {
+                color: #fff;
+                background-color: $primary-4;
+            }
+            &.ui-state-active{
+                background-color: $secondary-2;
+            }
+            &.ui-state-highlight{
+                background-color: $secondary-2;
+                &:hover {
+                    color: #fff;
+                    background-color: $primary-4;
+                }
+            }
+        }
+    }
+}
+//center buttons
+.ui-picklist {
+    .ui-button-icon-only .ui-button-icon-left {
+       position: static;
+        margin-top: 0;
+        width: 3.1rem;
+    }
+    .ui-picklist-buttons button {
+        border:none;
+        background:none;
+        height: 3rem;
+        .pi:before {
+            background-color: $primary-1;
+            mask-repeat: no-repeat;
+            content: "";
+            height: 3rem;
+            width: 3rem;
+            display: block;
+            margin-left: .2rem;
+        }
+        &:hover .pi:before {
+            background-color: $primary-5;
+        }
+        .pi-angle-right:before {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M17 14l6 6-6 6' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M17 14l6 6-6 6' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        }
+        .pi-angle-double-right:before {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M21 14l6 6-6 6M13 14l6 6-6 6' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M21 14l6 6-6 6M13 14l6 6-6 6' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        }
+        .pi-angle-left:before {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M23 14l-6 6 6 6' opacity='.98' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M23 14l-6 6 6 6' opacity='.98' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        }
+        .pi-angle-double-left:before {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M27 14l-6 6 6 6M19 14l-6 6 6 6' opacity='.98' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+            mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M28 3c5 0 9 4 9 9v16c0 5-4 9-9 9H12c-5 0-9-4-9-9V12c0-5 4-9 9-9h16m0-3H12C5.4 0 0 5.4 0 12v16c0 6.6 5.4 12 12 12h16c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12z' fill='currentColor'/%3E%3Cpath d='M27 14l-6 6 6 6M19 14l-6 6 6 6' opacity='.98' fill='none' stroke='currentColor' stroke-width='3' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+        }
+    }
+}
+
+nm-input-switch{
+    label {
+        margin-bottom: 0;
+        margin-top: .2rem;
+        max-width: calc(100% - 60px);
+    }
+    &::before{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    p-inputswitch {
+        margin-left: .5rem;
+        &.left{
+            margin-left: 0;
+            margin-right: .5rem;
+            float: left;
+        }
+        &.right{
+           
+            float: right;
+        }
+        //unselected circle
+        .ui-inputswitch .ui-inputswitch-slider:before {
+            background-color: #ccc;
+        }
+        //regular
+        .ui-inputswitch .ui-inputswitch-slider {
+            transition: background-color .3s, box-shadow .2s;
+            background: white;
+            border: 1px solid #ccc;
+        }
+        //hover
+        .ui-inputswitch:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+            background-color: #b7b7b7;
+        }
+       
+        //selected
+        .ui-inputswitch.ui-inputswitch-checked .ui-inputswitch-slider {
+            background-color: #186ba0;
+        }
+        .ui-inputswitch.ui-inputswitch-checked .ui-inputswitch-slider:before {
+            background-color: #fff;
+        }
+        //hover of selected
+        .ui-inputswitch.ui-inputswitch-checked:not(.ui-state-disabled):hover .ui-inputswitch-slider {
+            background-color: #114d74;
+        }
+    }
+
+} 

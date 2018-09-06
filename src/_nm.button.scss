@@ -109,17 +109,23 @@ button:focus{
     line-height:1.5;
     &:hover,
     &:active,
-    &.active{
+    &.active,
+    &:focus{
       color: $primary-5;
       background: none;
     }
     &:focus{
-      outline: $focus-outline-setting;
+      outline: none;
+      box-shadow: none;
     }
     svg {
       width: 1.4rem;
       height: 1.4rem;
       margin-right: .6rem;
+    }
+   i,.fa {
+      font-size: 1.5rem;
+        margin-right: .3rem;
     }
 }
 
@@ -127,15 +133,22 @@ button:focus{
     padding: 0;
     background: transparent;
     color:#006bc2;
-    i {
+    i, .fa {
       font-size: 1.5rem;
     }
     svg {
       width: 2rem;
       height: 2rem;
   }
-  &:hover{
+  &:hover,
+  &.active,
+  &:focus{
     color: $primary-5;
+    background: none;
+  }
+  &:focus{
+    outline: none;
+    box-shadow: none;
   }
 }
 
