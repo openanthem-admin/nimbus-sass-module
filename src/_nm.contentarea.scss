@@ -922,6 +922,11 @@ button.ui-datepicker-trigger.ui-calendar-button {
         background: #d9edfd;
         color: $primary-4;
         border: 1px solid #B8D4E8;
+        svg {
+            height: 1.4rem;
+            width: 1.4rem;
+            display: inline-block;
+        }
     }
     .ui-panelmenu-content-wrapper {
         .ui-widget-content {
