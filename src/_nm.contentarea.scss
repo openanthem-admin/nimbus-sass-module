@@ -287,7 +287,7 @@ svg.logo {
 }
 
 .main-content{
-        padding:0 0 1rem 0;
+        padding: 0 ;
         margin: 0 1rem;
     }
 
@@ -336,7 +336,6 @@ svg.logo {
     font-size: 1.09rem;
     min-height: 60px;
     margin: 0 0px 10px 0;
-    width: calc(95% + 1rem);
     nm-subheader {
         margin-bottom: .5rem;
         display: block;
@@ -457,10 +456,7 @@ svg.logo {
 .mediumCard .ui-paginator-top {
     display: none;
 }
-.info-card {
-    display: inline-block;
-    width: 90%;
-}
+
 .ui-dialog .ui-dialog-titlebar-close span {
     font-size: 1.5rem;
 }
@@ -900,7 +896,11 @@ button.ui-datepicker-trigger.ui-calendar-button {
 .section-nav {
     width: 100%;
 }
-
+.navbar-toggler {
+    background: #e3e3e3;
+    width: 100%;
+    margin-bottom: 1rem;
+}
 .navbar-toggler-icon::before{
 @extend .svgIcon;
 @extend .add-note;
@@ -908,6 +908,8 @@ button.ui-datepicker-trigger.ui-calendar-button {
 
 //changes for nav prime ng widget
 .ui-panelmenu  {
+    -webkiit-transition: width 300ms;
+    transition: width 300ms;
     .ui-menuitem-text {
         display: inline-block;
         width: calc(100% - 2rem);
@@ -1254,16 +1256,17 @@ p-accordiontab p-header h2 {
 }
 
 #actionTray {
+    display: none;
     position: fixed;
     top: 100px;
-    right: 0;
-    width: 60px;
+    right: 20px;
+    width: 40px;
     bottom: 0px;
     &::before {
         position: fixed;
         top: 0;
-        right: 0;
-        width: 60px;
+        right: 20px;
+        width: 40px;
         bottom: 0px;
         background: #d9edfd;
         display: block;
@@ -1325,8 +1328,17 @@ p-accordiontab p-header h2 {
         left: 38px;
         background: #fff;
     }
+    .info-card{
+        width: calc(100% - 36px - 1rem);
+        display: inline-block;
 
-
+      }
+      .main-content {
+        padding: 0 60px 0 1rem;
+    }
+    #actionTray{
+        display: block;
+    }
     .globalNav{
         display: block;
     }
@@ -1382,11 +1394,10 @@ p-accordiontab p-header h2 {
     }
     .ui-panelmenu{
         width: auto;
-        -webkiit-transition: width 300ms;
-        transition: width 300ms;
+   
     }
   .info-card{
-      width: 82%;
+    width: calc(100% - 13% - 1rem);
   }
     .section-nav{
         width: 13%;
