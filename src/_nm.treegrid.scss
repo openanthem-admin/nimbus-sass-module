@@ -1,0 +1,46 @@
+nm-treegrid {
+    .ui-datatable-header.ui-widget-header {
+        position: relative;
+        p-header{
+            font-size: 1rem;
+        }
+    }
+    .pi-fw {
+        font-size: 1.6rem;
+        line-height: 1.4rem;
+    }
+    .pi-chevron-down::before{
+       content: "\e906";
+       color: $primary-5;
+    }
+    .pi-chevron-right::before {
+        content: "\e905";
+        color: $primary-2;
+    }
+    .ui-treetable-toggler:hover {
+        .pi-chevron-down::before,
+        .pi-chevron-right::before {
+             color: $primary-4;
+         }
+    } 
+}
+.ui-treetable.ui-widget {
+    .ui-widget-header.ui-paginator.ui-paginator-top {
+        top: -30px;
+    }
+}
+ 
+
+.ui-treetable .ui-treetable-thead > tr > th,
+.ui-treetable .ui-treetable-tbody > tr > td {
+    border-left: none;
+    border-right: none;
+}
+.ui-treetable .ui-treetable-thead > tr > th,
+.ui-treetable .ui-treetable-tbody > tr {
+    color: inherit;
+}
+.ui-treetable-thead,
+.ui-treetable-tbody {
+    border: 1px solid #eee;
+}
