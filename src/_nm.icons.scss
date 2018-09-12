@@ -58,10 +58,23 @@ h3.svgIcon::before{
     margin-right: .8rem;
 }
 
-.scrollGrid .svgIcon::before{ 
-    margin-left: calc(30% - .8rem);
+// .scrollGrid .svgIcon::before{ 
+//     margin-left: calc(30% - .8rem);
+// }
+.svgIcon.x2, 
+.svgIcon.x2:before {
+    height: 30px;
+    width: 30px;
+}
+.svgIcon.x3, 
+.svgIcon.x3:before {
+    height: 40px;
+    width: 40px;
 }
 .svgIcon{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
     &::before {
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
@@ -72,10 +85,27 @@ h3.svgIcon::before{
         background-color:$primary-1;
     }
     
-    &.red::before{
+    &.red{
         background-color: $tertiary-4;
+        &::before{
+            background-color: #fff;
+        }
     }
-    
+    &.orange{
+        background-color: $primary-5;
+        &::before{
+            background-color: black;
+        }
+    }
+    &.orangeKO{
+        background-color: $primary-5;
+        &::before{
+            background-color: #fff;
+        }
+    }
+    &.orangeIcon::before{
+        background-color: $primary-5;
+    }
     &.activity::before {
         mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='currentColor'%3E%3Cpath d='M19.5 6.4c-1.8.1-3.4-1.3-3.5-3-.1-1.8 1.3-3.3 3.2-3.4 1.8-.1 3.4 1.3 3.5 3 0 1.8-1.4 3.3-3.2 3.4zM24.5 18.2l-.4-6.5 3.3 2c.6.3.9.9.9 1.6v4.3c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6v-4.7c0-1.3-.7-2.5-1.8-3.1l-6.6-4c-.4-.2-.9-.3-1.3-.2l-4.6 1c-.3.1-.5.3-.5.6l.6 12.4-3.9 5.2c-.2.2-.4.7-.5 1.2l-2 9.7c-.2 1.2.6 2.2 1.8 2.2.9 0 1.6-.6 1.8-1.5l2.2-9.7c.1-.3.2-.6.4-.8l6.8-8.1c.4-.4.6-1 .6-1.6z'/%3E%3Cpath d='M15.9 14.9l-.3-4.3-6.7 6.8c-.6.6-.6 1.5 0 2.1.6.6 1.5.6 2.1.1l4.9-4.7zM24.3 21.7l-3.7 4.4.4 4.2c.1.6.4 1.2.9 1.7l6.3 5.3c.9.8 2.3.6 3-.4.6-.9.4-2-.4-2.7L25 29.5c-.1-.1-.2-.3-.2-.5l-.5-7.3z'/%3E%3C/g%3E%3C/svg%3E");
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='currentColor'%3E%3Cpath d='M19.5 6.4c-1.8.1-3.4-1.3-3.5-3-.1-1.8 1.3-3.3 3.2-3.4 1.8-.1 3.4 1.3 3.5 3 0 1.8-1.4 3.3-3.2 3.4zM24.5 18.2l-.4-6.5 3.3 2c.6.3.9.9.9 1.6v4.3c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6v-4.7c0-1.3-.7-2.5-1.8-3.1l-6.6-4c-.4-.2-.9-.3-1.3-.2l-4.6 1c-.3.1-.5.3-.5.6l.6 12.4-3.9 5.2c-.2.2-.4.7-.5 1.2l-2 9.7c-.2 1.2.6 2.2 1.8 2.2.9 0 1.6-.6 1.8-1.5l2.2-9.7c.1-.3.2-.6.4-.8l6.8-8.1c.4-.4.6-1 .6-1.6z'/%3E%3Cpath d='M15.9 14.9l-.3-4.3-6.7 6.8c-.6.6-.6 1.5 0 2.1.6.6 1.5.6 2.1.1l4.9-4.7zM24.3 21.7l-3.7 4.4.4 4.2c.1.6.4 1.2.9 1.7l6.3 5.3c.9.8 2.3.6 3-.4.6-.9.4-2-.4-2.7L25 29.5c-.1-.1-.2-.3-.2-.5l-.5-7.3z'/%3E%3C/g%3E%3C/svg%3E");
