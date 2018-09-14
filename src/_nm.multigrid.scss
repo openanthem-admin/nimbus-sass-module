@@ -75,7 +75,11 @@ ng-component{
             color: $primary-4;
         }
     }
-    
+    .ui-sortable-column.ui-state-highlight {
+        .ui-sortable-column-icon {
+            color: $primary-5;
+        }
+    }
     .col-icon {
         width: 30px;
     }
@@ -288,11 +292,12 @@ ng-component{
 .ui-widget-content {
     border:none;
 }
-.ui-paginator .ui-paginator-page{
-    padding: .2rem .7rem;
-    margin-left: .1rem;
-    margin-right: .1rem;
-}
+
+// .ui-paginator .ui-paginator-page{
+//     padding: .2rem .7rem;
+//     margin-left: .1rem;
+//     margin-right: .1rem;
+// }
 .ui-datatable-header {
     min-height: 30px;
 }
@@ -305,43 +310,10 @@ ng-component{
         font-size: 1rem;
         text-align: right;
         padding: .25em;
-        .ui-paginator-element span.fa:before {
-            font-size: 1.15rem;
-        }
         .ui-paginator-page.ui-state-active {
-            background: #184987;
+            background: $secondary-1;
             color: #ffffff;
-            
-        }
-        .ui-corner-all {
-            border-radius: 0px;
-        }
-        .ui-state-default{
-            border: none;
-        }
-        .ui-paginator-first{
-            background: none;
-            color:#fff;
-            
-        }
-        .ui-paginator-prev{
-            background: none;
-            color:#fff;
-            .fa-backward::before{
-                content: "\f060";
-            }
-        }
-        .ui-paginator-next{
-            background: none;
-            color:#fff;
-            .fa-forward::before{
-                content: "\f061";
-            }
-        }
-        .ui-paginator-last{
-            background: none;
-            color:#fff;
-            
+            border-color: #fff;
         }
         &.ui-paginator-top {
             top: 0;
@@ -350,12 +322,79 @@ ng-component{
         }
     }
 }
+
+.ui-paginator .ui-paginator-icon::before{
+    height: .8rem;
+    width: .8rem;
+    background-color: white;
+    display: inline-block;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+.ui-paginator .ui-paginator-page, 
+.ui-paginator .ui-paginator-pages, 
+.ui-paginator .ui-paginator-next, 
+.ui-paginator .ui-paginator-last, 
+.ui-paginator .ui-paginator-first, 
+.ui-paginator .ui-paginator-prev, 
+.ui-paginator .ui-paginator-current{
+       background-color: transparent;
+    border: 1px solid #fff;
+    height: 1.8rem;
+    margin: 0;
+    min-width: 1.8rem;
+    width: auto;
+}
+.ui-paginator .ui-paginator-pages {
+    border: 0;
+    vertical-align: inherit;
+}
+.ui-paginator a.ui-state-disabled{
+    background: transparent;
+
+}
+.ui-paginator .ui-paginator-first {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+.ui-paginator .ui-paginator-last {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+.ui-paginator{
+    a:not(.ui-state-disabled):not(.ui-state-active):hover {  
+        background-color: $primary-5; 
+        border-color: #fff;  
+    }
+    .pi-step-backward::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M34 2L16 20l18 18' opacity='.98' fill='none' stroke='%23006bc2' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath d='M9 2v36' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M34 2L16 20l18 18' opacity='.98' fill='none' stroke='%23006bc2' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath d='M9 2v36' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+    content:"";
+    }
+    .pi-caret-left::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M29 2L11 20l18 18' opacity='.98' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M29 2L11 20l18 18' opacity='.98' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        content:"";
+    }
+    .pi-caret-right::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M11 2l18 18-18 18' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M11 2l18 18-18 18' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        content:"";
+    }
+    .pi-step-forward::before {
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M6 2l18 18L6 38' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath d='M31 2v36' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M6 2l18 18L6 38' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath d='M31 2v36' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
+        content:"";
+    }
+} 
+
 .recordsDisplayed{
     position: absolute;
     left: 40%;
     padding-top: .6rem;
     font-size: .9rem;
-    z-index: 1;
+    // z-index: 1;
 }
 .ui-table-header .btn-plain,
 .ui-datatable-header .btn-plain { 
@@ -411,4 +450,8 @@ margin-right: 10px;
 }
 .ui-state-highlight a { 
     color: #0275d8;
+}
+
+.ui-table .ui-table-thead > tr > th, .ui-table .ui-table-tfoot > tr > td {
+    background-color: $tertiary-2;
 }

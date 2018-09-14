@@ -5,20 +5,48 @@
 	margin-left: 20px;
 	vertical-align: top;
 	padding: 0;
-	.collapse.show {
+	.show,
+	.collapsing {
 		display: block;
+		width: 100%;
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		padding: 10px;
+		background: rgb(255, 255, 255);
+		bottom: 0px;
+		top: 91px;
 	}
+	
 }
 	
-.logoColor { fill: blue;}
+.header .headerMenu {
+    position: absolute;
+    top: 50px;
+	right: 0;
+	padding-right: 0;
+}
+.headerMenu .navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+}
+.headerMenu .navbar-collapse {
+    margin-top: 30px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #eee;
+}
 
 .header {
 	height: 90px;
-	color: $header-bkg;
+	color: $secondary-1;
 	background: #fff;
 	border-bottom: 1px solid #578de1;
-	position: relative;
+	position: fixed;
 	z-index: 2;
+	right: 0;
+    left: 0;
 	a{
 		text-decoration: none;
 	}
@@ -26,7 +54,7 @@
 		display: block;
 		height: 1rem;
 		content: "";
-		background-color: $header-bkg;
+		background-color: $secondary-1;
 	}
 	
 	.productName, .productName p {
@@ -76,14 +104,17 @@
 	}
 		
 	.headerMenu {
-		padding-right: 20px;
 		float: right;
 		.btn-group{
 			padding-top: 1.8rem;
 			margin-right: 1rem;
 			float: right;
+			display: block;
 			.btn.btn-icon i{
 				font-size: 2.2rem;
+			}
+			.btn{
+				display: block;
 			}
 		}
 		.topLinksMenu{
@@ -156,7 +187,7 @@
 	.circle {
 		background-color:white;
 		position: absolute;
-		border:2px solid $header-bkg;    
+		border:2px solid $secondary-1;    
 		height:20px;
 		border-radius:50%;
 		-moz-border-radius:50%;

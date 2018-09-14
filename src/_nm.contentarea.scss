@@ -287,20 +287,23 @@ svg.logo {
 }
 
 .main-content{
-        padding:0 0 1rem 0;
+        padding: 140px 0 0 0 ;
         margin: 0 1rem;
     }
 
-.breadcrumb {
+nm-breadcrumb {
+    display: none;
     padding: 0;
     .breadcrumb-bar{
         padding: 0.5rem;
         background: #fff;
         ol{
             margin-bottom: 0;
+            padding: 0;
         }
         .breadcrumb-item{
             // font-size: 1rem;
+            display: inline-block;
             &> a{
                 text-decoration: none;
             }
@@ -336,7 +339,6 @@ svg.logo {
     font-size: 1.09rem;
     min-height: 60px;
     margin: 0 0px 10px 0;
-    width: calc(95% + 1rem);
     nm-subheader {
         margin-bottom: .5rem;
         display: block;
@@ -457,10 +459,7 @@ svg.logo {
 .mediumCard .ui-paginator-top {
     display: none;
 }
-.info-card {
-    display: inline-block;
-    width: 90%;
-}
+
 .ui-dialog .ui-dialog-titlebar-close span {
     font-size: 1.5rem;
 }
@@ -482,6 +481,7 @@ svg.logo {
 }
 .textWrapBreakWord {
     word-break: break-word;
+    display: inline-block;
 }
 //card-details-field alignment
 .label-left{
@@ -535,21 +535,23 @@ legend {
     .col-lg-12:first-of-type{
         padding-left: 0;
     }
-    .form-group.questionGroup  {
-        background: $primary-3;
-        display: block;
-        padding: .3rem .7rem .8rem;
-        margin: 0 100px 0 20px;
-        label:first-of-type {
-            margin-top: 0;
-        }
-        input, .ui-dropdown, textarea {
-            max-width: 300px;
-            width: 100%;
-            margin-left: 0;
-            margin-left: 20px;
-        }
-    }
+    // .form-group.questionGroup  {
+    //     background: $primary-3;
+    //     display: block;
+    //     padding: .3rem .7rem .8rem;
+    //     margin: 0 100px 0 20px;
+    //     label:first-of-type {
+    //         margin-top: 0;
+    //     }
+    //     input, .ui-dropdown, textarea {
+    //         width: calc(100% - 20px);
+    //         margin-left: 20px;
+    //     }
+    //     .ui-calendar input{
+    //         width: calc(100% - 20px - 2.5rem);
+
+    //     }
+    // }
     legend:first-of-type {
         margin-bottom: .5rem;
     }
@@ -707,7 +709,6 @@ $answerWidth: 99%-$questionWidth;
     label {
         display: block;
         margin: .3rem 0;
-        max-width: 850px;
         &.ui-chkbox-label,
         &.ui-radiobutton-label {
             display: inline-block;
@@ -723,25 +724,21 @@ $answerWidth: 99%-$questionWidth;
             margin: 1px 0 0 0;
         }
     }
-    input {
+    input,
+    textarea,
+    .ui-dropdown{
+        width: calc(100% - 20px);
         margin-left: 20px;
-        max-width: 300px;
-        width: 90%;
     }
-    textarea {
-        margin-left: 20px;
-        max-width: 800px;
-        width: 90%;
+    .ui-calendar input{
+        width: calc(100% - 20px - 2.5rem);
+
     }
-  
    
-    //.date-holder is old date component
-    .date-holder::after {
-        vertical-align: text-bottom;
+    .form-group.questionGroup .ui-calendar input {
+        width: calc(100% - 2.5rem - 20px);
     }
-    .date-holder input {
-        width: 180px;
-    }
+   
     label:first-of-type,
     legend:first-of-type {
         margin-bottom: .5rem;
@@ -797,6 +794,13 @@ $answerWidth: 99%-$questionWidth;
         vertical-align: bottom;
     }
 }
+.ui-calendar .ui-datepicker {
+    min-width: auto;
+    width: 100%;
+    max-width: 250px;
+    left: unset !important;
+    right: 0;
+}
 .ui-datepicker {
 .ui-widget-content a{
         color: #696b6c;
@@ -833,7 +837,7 @@ $answerWidth: 99%-$questionWidth;
 button.ui-datepicker-trigger.ui-calendar-button {
     border: none;
     background: none;
-    color: #2399e5;
+    color: $primary-2;
     font-size: 1.7rem;
     width: 2.5rem;
   }
@@ -858,56 +862,45 @@ button.ui-datepicker-trigger.ui-calendar-button {
     background: none;
 }
 
-//.date-holder is old date component
-
-// .date-holder {
-//     @extend .iconField;
-//     &::after {
-//         background-image: url('icons/calendar-small.png');
-//     }
-//     input{
-//         display: inline-block;
-//         width: 180px;
-//     }
-//     label {
-//         display: block;
-//     }
-// }
-
-
-// .editIcon::before {
-//     // font-family: "fontAwesome";
-//     // content:"\f040";
-//     content:"";
-//     display:block;
-//     background-image: url('icons/edit.png');
-//     background-size: 30px 30px;
-//     height:30px;
-//     width:30px;
-// }
-// .toggleIcon::before {
-//     // font-family: "fontAwesome";
-//     // content:"\f040";
-//     content:"";
-//     display:block;
-//     background-image: url('icons/open-accord.png');
-//     background-size: 30px 30px;
-//     height:30px;
-//     width:30px;
-// }
-
 
 .section-nav {
-    width: 100%;
+    position: fixed;
+    top: 55px;
+    left: 10px;
+    z-index: 2;
 }
-
+.navbar-toggler {
+    border: 1px solid #e3e3e3;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    color: $primary-1;
+}
+.navbar-toggler:not(.collapsed){
+    background-color: $primary-5;
+    color: #fff;
+}
+.navbar-toggler:hover {
+    background: $primary-4;
+    color: #fff;
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: auto;
+    height: auto;
+    
+}
 .navbar-toggler-icon::before{
-@extend .svgIcon;
-@extend .add-note;
+//@extend .svgIcon;
+//@extend .add-note;
+font-family: "fontAwesome";
+content: "\f0c9";
 }
 
 //changes for nav prime ng widget
 .ui-panelmenu  {
+    -webkiit-transition: width 300ms;
+    transition: width 300ms;
     .ui-menuitem-text {
         display: inline-block;
         width: calc(100% - 2rem);
@@ -915,6 +908,7 @@ button.ui-datepicker-trigger.ui-calendar-button {
     }
     .ui-panelmenu-panel{
         margin-bottom: .3rem;
+        position: relative;
     }
     .ui-panelmenu-header-link {
         background: #d9edfd;
@@ -1259,16 +1253,17 @@ p-accordiontab p-header h2 {
 }
 
 #actionTray {
+    display: none;
     position: fixed;
     top: 100px;
-    right: 0;
-    width: 60px;
+    right: 20px;
+    width: 40px;
     bottom: 0px;
     &::before {
         position: fixed;
         top: 0;
-        right: 0;
-        width: 60px;
+        right: 20px;
+        width: 40px;
         bottom: 0px;
         background: #d9edfd;
         display: block;
@@ -1291,167 +1286,5 @@ p-accordiontab p-header h2 {
         // &:hover{
         //     color: $primary-5;
         // }
-    }
-}
-
-// screen breaks below
-@media screen and (min-width: 576px) {
-    .section-nav {
-        width: auto;
-    }
-    .ui-menuitem-text {
-
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-        opacity: 0;
-        -webkiit-transition: opacity 300ms;
-        transition: opacity 300ms;
-    }
-    .ui-panelmenu-header-link {
-        min-height: 34px;
-        
-    }
-    .ui-panelmenu{
-        width: 36px;
-        -webkiit-transition: width 300ms;
-        transition: width 300ms;
-    }
-    .navbar-toggleable-md .navbar-collapse {
-        z-index: 1;
-        position: absolute;
-        width: 400%;
-        top: 0px;
-        left: 38px;
-        background: #fff;
-    }
-
-
-    .globalNav{
-        display: block;
-    }
-}
-
-.navbar-toggleable-md .navbar-collapse {
-    width: 350px;
-}
-@media screen and (min-width: 768px) {
-    // .header {
-    //     height: 80px;
-    // }
-      
-  
-    .logo {
-        margin-left: 10px;
-        margin-top: 15px;
-    }
-    .navbar-toggleable-md .navbar-collapse {
-        width: 300px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    // html {
-    //     font-size: 14px;
-    //     line-height: 18px;
-    // }
-    //nav bar hiding methods...  
-    // .navbar-toggleable-md .navbar-toggler {
-    //     display: none;
-    // }
-    // .navbar-toggleable-md .navbar-collapse {
-    //     display: block;
-    //     width: 100%;
-    //     position: static;  
-    // }
-    .ui-menuitem-text {
-
-        position: static;
-        width: auto;
-        height: auto;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-        clip: auto;
-        border: 0;
-        opacity: 1;
-    }
-    .ui-panelmenu-header-link {
-        min-height: 34px;
-       
-    }
-    .ui-panelmenu{
-        width: auto;
-        -webkiit-transition: width 300ms;
-        transition: width 300ms;
-    }
-  .info-card{
-      width: 82%;
-  }
-    .section-nav{
-        width: 13%;
-    }
-    // .header {
-    //     height: 90px;
-    // }
-}
-
-@media screen and (min-width: 1200px) {
-  
-}
-@media screen and (min-width: 1300px) {
-    // .header {
-    //     height: 100px;
-    // }
-
-}
-
-@media print {
-    textarea.textarea-input {
-        display: none;
-    }
-    input.text-input {
-        display: none;
-    }
-    .print-only {
-        display: block;
-        min-height: 1.6rem;
-    }
-    .ui-dropdown {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    .ui-table td:not(.dropdown) .ui-cell-data, 
-    .ui-table td:not(.dropdown) > span, 
-    .ui-datatable td:not(.dropdown) .ui-cell-data, 
-    .ui-datatable td:not(.dropdown) > span {
-        white-space: normal !important;
-        overflow: visible !important;
-    }
-
-    .ui-table .ui-table-thead > tr > th > span, 
-    .ui-table .ui-datatable-thead > tr > th > span, 
-    .ui-datatable .ui-table-thead > tr > th > span, 
-    .ui-datatable .ui-datatable-thead > tr > th > span {
-        white-space: normal !important;
-        overflow: visible !important;
-    }
-
-    footer {
-        display: none;
-    }
-    .charCount{
-        display: none;
-    }
-}
-
-@media screen {
-    pre.print-only {
-        display: none;
     }
 }

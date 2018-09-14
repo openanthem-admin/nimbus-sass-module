@@ -1,6 +1,6 @@
 .action-dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
     vertical-align: top;
     .dropdownTrigger {
         width: 1.3rem;
@@ -24,13 +24,15 @@
         }
     }
     .dropdownContent {
+        position: static;
+        width: 100%;
         max-height: 0;
-        width: 200px;
+        width: 100%;
         background: #fcf6d9;
         border: 1px solid #e5991c;
         overflow-y: auto;
         top: 0;
-        position: absolute;
+        position: static;
         z-index: 2;
         right: 100%;
         padding: 0;
@@ -146,4 +148,13 @@
 .ui-datatable .ui-datatable-tfoot > tr > td, 
 .ui-datatable .ui-datatable-data > tr > td {
     padding: .5rem .4rem;
+}
+@media screen and (min-width: 576px) {
+    .action-dropdown {
+        display: inline-block;
+        .dropdownContent {
+            position: absolute;
+            width: 200px;
+        }
+    }
 }

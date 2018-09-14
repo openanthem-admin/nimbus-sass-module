@@ -60,10 +60,13 @@ label.custom-control.required{
 }
 .ui-calendar input {
     width: calc(100% - 2.5rem);
-    max-width: calc(600px - 2.5);
 }
 .ui-calendar .ui-clickable.pi.pi-calendar {
     font-size: 2.5rem;
+}
+.ui-calendar-timeonly:before {
+    content: "\f017";
+    font-family: "fontAwesome";
 }
 //for custom radio and checkbox
 .custom-control-indicator {
@@ -198,6 +201,9 @@ fieldset.subquestion legend:first-of-type {
     display: block;
     margin-bottom: 1rem;
 }
+.form-inline{
+    display:block; //override flex
+}
 .form-group.form-inline .form-checkrow {
   display: inline-block;
   margin-right: 1.3rem;
@@ -276,7 +282,6 @@ p-dropdown.form-control {
 }
 .ui-dropdown {
     width: 100%;
-    max-width: 600px;
     .ui-dropdown-panel .ui-dropdown-list{
         padding:0;
     }
@@ -379,9 +384,9 @@ p-dropdown.form-control {
     text-align: center;
 }
 
-.form-group.questionGroup .ui-calendar input { 
-    max-width: calc(300px - 2.5rem);
-}
+// .form-group.questionGroup .ui-calendar input { 
+//     max-width: calc(300px - 2.5rem);
+// }
 .ui-inputtext { 
     
         padding: .375rem .75rem;
@@ -398,42 +403,46 @@ p-dropdown.form-control {
 p-checkbox.ng-dirty.ng-invalid .ui-chkbox-box {
     border-bottom-color: #9dd3f7;
 }
+.ui-chkbox-box.ui-state-active .ui-chkbox-icon.ui-clickable:before {
+    font-family: "fontAwesome";
+    content: "\f00c";
+}
 
-    .ui-chkbox-box.ui-state-active, 
-    .ui-radiobutton-box.ui-state-active {
-        border: 1px solid #006bc2;
-        background: #006bc2;
-        color: #FFFFFF;
-   
-        .ui-radiobutton-icon{
-            position:relative;
-            vertical-align: bottom;
-            &::before {
-                font-size: .8rem;
-                left: -.17rem;
-                position: absolute;
-                bottom: .65rem;
-            }
+.ui-chkbox-box.ui-state-active, 
+.ui-radiobutton-box.ui-state-active {
+    border: 1px solid #006bc2;
+    background: #006bc2;
+    color: #FFFFFF;
+
+    .ui-radiobutton-icon{
+        position:relative;
+        vertical-align: bottom;
+        &::before {
+            font-size: .8rem;
+            left: -.17rem;
+            position: absolute;
+            bottom: .65rem;
         }
     }
+}
 
 
-    .ui-radiobutton-box:not(.ui-state-disabled):not(.ui-state-active):hover,
-    .ui-chkbox-box:not(.ui-state-disabled):not(.ui-state-active):hover {
-        border-color: #006bc2;
-        background: #D9EDFD;
-    }
-    .ui-radiobutton-box.ui-state-disabled,
-    .ui-radiobutton-box.ui-state-disabled:hover,
-    .ui-chkbox-box.ui-state-disabled,
-    .ui-chkbox-box.ui-state-disabled:hover,
-    .ui-chkbox-box.ui-state-active.ui-state-disabled, 
-    .ui-radiobutton-box.ui-state-disabled.ui-state-active {
-        border-color: $secondary-4;
-        background: #d4d4d4;
-        opacity: 1;
-        color: $primary-4;
-    }
+.ui-radiobutton-box:not(.ui-state-disabled):not(.ui-state-active):hover,
+.ui-chkbox-box:not(.ui-state-disabled):not(.ui-state-active):hover {
+    border-color: #006bc2;
+    background: #D9EDFD;
+}
+.ui-radiobutton-box.ui-state-disabled,
+.ui-radiobutton-box.ui-state-disabled:hover,
+.ui-chkbox-box.ui-state-disabled,
+.ui-chkbox-box.ui-state-disabled:hover,
+.ui-chkbox-box.ui-state-active.ui-state-disabled, 
+.ui-radiobutton-box.ui-state-disabled.ui-state-active {
+    border-color: $secondary-4;
+    background: #d4d4d4;
+    opacity: 1;
+    color: $primary-4;
+}
 
 
 
