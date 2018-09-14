@@ -106,14 +106,14 @@ h3.svgIcon::before{
             background-color: #fff;
         }
     }
-    &.orange{
-        background-color: $primary-5;
+    &.tertiary-5{
+        background-color: $tertiary-5;
         &::before{
             background-color: black;
         }
     }
-    &.orangeKO{
-        background-color: $primary-5;
+    &.tertiary-5KO{
+        background-color: $tertiary-5;
         &::before{
             background-color: #fff;
         }

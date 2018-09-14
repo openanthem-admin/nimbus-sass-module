@@ -201,6 +201,9 @@ fieldset.subquestion legend:first-of-type {
     display: block;
     margin-bottom: 1rem;
 }
+.form-inline{
+    display:block; //override flex
+}
 .form-group.form-inline .form-checkrow {
   display: inline-block;
   margin-right: 1.3rem;
