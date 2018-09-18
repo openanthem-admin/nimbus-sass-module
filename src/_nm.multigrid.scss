@@ -234,6 +234,9 @@ ng-component{
         display:block;
     }
 }
+.ui-treetable th.imageColumn, .ui-treetable td.imageColumn {
+    width: 40px;
+}
 .ui-datatable-header p-header {
     position: absolute;
     left: 6px;
