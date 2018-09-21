@@ -30,7 +30,7 @@
         margin-bottom: 1rem;
         .ui-accordion-content{
             padding: 1rem;
-            .cardBody{
+            .cardBody:not(.toggleCard){
                 padding: 0;
             }
         }
