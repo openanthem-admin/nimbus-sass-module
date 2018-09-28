@@ -19,7 +19,9 @@ button:focus{
     padding-top: 2rem;
   }
 }
-
+.btn:not(:disabled):not(.disabled), a:not(.disabled), button {
+  cursor: pointer;
+}
 .btn-primary {
   background: $primary-5;
   border-color: $primary-5;
