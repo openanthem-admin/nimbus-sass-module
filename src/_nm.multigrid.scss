@@ -49,12 +49,12 @@ ng-component{
       
         &.ui-widget-content.ui-table-even,
         &.ui-widget-content.ui-datatable-even {
-            background-color: #fff;
+            background-color: $primary-3;
            
         }
         &.ui-widget-content.ui-table-odd,
         &.ui-widget-content.ui-datatable-odd {
-            background-color: #edf7ff;
+            background-color: #fff;
             
         }
         &.ui-widget-content.ui-state-highlight { 
@@ -123,6 +123,7 @@ ng-component{
             width: 90%;
             input{
                 width: 100%;
+                height: 1.8rem;
             }
             button{
                 position: absolute;
@@ -136,6 +137,9 @@ ng-component{
                 &:hover, &:focus{
                     color: $primary-4;
                 }
+            }
+            .ui-calendar .ui-datepicker{
+                min-width: 200px;
             }
         }
         .filterSubmit{
@@ -431,7 +435,17 @@ margin-right: 10px;
     background: inherit;
     color: inherit;
 }
-.ui-table .ui-table-tbody>tr:nth-child(even){
+.ui-table .ui-table-tbody>tr.even{
+    background-color: $primary-3;
+    &.ui-state-highlight {
+        background-color: inherit;
+        color: inherit;
+    }
+    + tr.ui-expanded-row-content {
+        background: $primary-3;
+    }
+}
+.ui-table .ui-table-tbody>tr.odd{
     background-color: #fff;
     &.ui-state-highlight {
         background-color: inherit;
@@ -439,16 +453,6 @@ margin-right: 10px;
     }
     + tr.ui-expanded-row-content {
         background: #fff;
-    }
-}
-.ui-table .ui-table-tbody>tr:nth-child(odd){
-    background-color: $primary-3;
-    &.ui-state-highlight {
-        background-color: inherit;
-        color: inherit;
-    }
-    + tr.ui-expanded-row-content {
-        background: #edf7ff;
     }
 }
 .ui-state-highlight a { 

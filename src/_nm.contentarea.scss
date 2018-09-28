@@ -898,6 +898,9 @@ content: "\f0c9";
 }
 
 //changes for nav prime ng widget
+nm-panelmenu {
+    flex: 1;
+}
 .ui-panelmenu  {
     -webkiit-transition: width 300ms;
     transition: width 300ms;
@@ -1255,7 +1258,7 @@ p-accordiontab p-header h2 {
 #actionTray {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 150px;
     right: 20px;
     width: 40px;
     bottom: 0px;

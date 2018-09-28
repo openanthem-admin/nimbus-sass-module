@@ -1,9 +1,10 @@
 .globalNav{
     //display:none; //hides at small screen
-    border-top: 1px solid #669fe2;
-    border-bottom: 1px solid #669fe2;
+    padding-left: 1rem;
     height: auto;
     z-index: 1;
+
+    z-index: 22;
     .orgSelect{
         margin-left: 30px;
         display: inline-block;
@@ -20,16 +21,14 @@
         padding-right: 2rem;
         p{
             padding-bottom:0;
-            
         }
     }
     a.menuLink{
         background: #d9edfd;
-        border: none;
         box-sizing: content-box;
         color: #4c4c4c;
         display: inline-block;
-        height: 25px;
+        height: 27px;
         min-width: 100px;
         padding: .4rem 1.5rem 0 1rem;
         position: static;
@@ -38,8 +37,12 @@
         white-space: nowrap;
         width: auto;
         margin-right: .4rem;
+        border-left: 1px solid $primary-2;
+        border-right: 1px solid $primary-2;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
         &:hover{
-            background: #e5991c;
+            background: $primary-4;
             color: #fff;
             text-decoration: none;
         }
@@ -47,17 +50,20 @@
     .custom-dropdown {
         border-right: 0px solid #cecece;
         display: inline-block;
-        margin-right: .4rem;
         min-width: 160px;
         padding-left: 0;
         vertical-align: top;
         width: auto;
+        margin-right: .4rem;
         button.dropdownTrigger {
             height: 30px;
             min-width: 160px;
             padding: 0 1rem 0 1rem;
             background: #d9edfd;
-            border: none;
+            border-top-color: transparent;
+            border-left: 1px solid $primary-2;
+            border-right: 1px solid $primary-2;
+            border-bottom-color: transparent;
             color: $primary-4;
             text-align: left;
             white-space: nowrap;
@@ -68,7 +74,7 @@
                 position: static;
                 font-family: fontAwesome;
                 border: 0px solid #eee;
-                background: #eee;
+                background-color: transparent;
                 padding-right: 1rem;
                 float: right;
                 padding-left: 1rem;
@@ -78,17 +84,29 @@
                 line-height: 1;
             }
         }
-        
-        &:hover{
+        &.active{
             button.dropdownTrigger {
-                background: #e5991c;
+                background: $primary-5;
                 color: #fff;
                 border-bottom: 0px solid #eee;             
                 &::after {
-                    background: #e5991c;
-                    border-color: #e5991c;
+                    background: $primary-5;
+                    border-color: $primary-5;
                     color: #fff;
-                    border-bottom: 0px solid #e5991c;
+                    border-bottom: 1px solid transparent;
+                }
+            }
+        }
+        &:hover{
+            button.dropdownTrigger {
+                background: $primary-4;
+                color: #fff;
+                border-bottom: 1px solid transparent;             
+                &::after {
+                    background: $primary-4;
+                    border-color: $primary-4;
+                    color: #fff;
+                    border-bottom: 0px solid $primary-4;
                     content: "\f0d7";              
                 }
             }
@@ -108,17 +126,24 @@
             transition: max-height .7s, opacity .2s;
             top: 30px;
             transition-timing-function: ease-in-out;
-            border: 1px solid #e5991c;
+            border: 1px solid $primary-5;
             opacity: 0;
+            nm-link:not(:last-child) a.menuLink {
+                border-bottom: 1px solid $primary-5;
+            }
             a.menuLink{
                 background: #fcf6d9;
-                border-bottom: 1px solid #e5991c;
+                border: none;
                 padding: .3rem .5rem;
                 white-space: normal;
                 height: auto;
                 margin-right: 0;
                 &:hover, &:focus {
-                    background: #e5991c;
+                    background: $primary-4;
+                    color: #fff;
+                }
+                &.active {
+                    background: $primary-5;
                     color: #fff;
                 }
             }
@@ -201,14 +226,77 @@
 
 .scroll-to-top {
     position: fixed;
-    bottom: 120px;
-    right: 25px;
+    bottom: -50px;
+    right: 20px;
     opacity: 0;
     transition: all .2s ease-in-out;
+    z-index: 2;
+    &.show-scroll {
+        opacity: 1;
+        bottom: 0px;
+    }
+    .scrollToTop {
+        border-radius: .4rem .4rem 0 0;
+        background: $primary-2;
+        border: $primary-2;
+       &:hover {
+            background: $primary-1;
+            border: $primary-1;
+            color: #fff;
+        }
+    }
 }
 
-.show-scroll {
-    opacity: 1;
-    //right: 15px;
-    transition: all .2s ease-in-out;
+
+@media screen and (min-width: 576px)  {
+    .globalNav{
+        border-bottom: 1px solid $primary-2;
+        background: #fff;
+    }
+// panel menu component to look like global nav
+.main-content.hasGlobalNav.withInfoBar {
+    padding-top: 50px;
+}
+    nav.section-nav.globalNav {
+        position: absolute;
+        top: 90px;
+        left: 10px;
+        right: 80px;
+        height: auto;
+        width: auto;
+        margin: 0 -80px 0 -20px;
+        padding: 0 20px;
+        nm-panelmenu {
+            display: flex;
+            flex: 1;
+            .ui-panelmenu {
+                display: flex;
+                flex: 1;
+                margin-bottom: 0;
+                .ui-panelmenu-panel {
+                    flex: 1;
+                    display: flex;
+                    margin-bottom: 0;
+                    .ui-widget.ui-panelmenu-header {
+                        display: flex;
+                        flex: 1;
+                        .ui-panelmenu-header-link {
+                            flex: 1;
+                        }
+                        .ui-menuitem-text {
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+            .ui-panelmenu-content-wrapper {
+                position: absolute;
+                z-index: 2;
+                min-width: 250px;
+                left: 0;
+                top: 100%;
+            }
+        }
+    }  
 }
