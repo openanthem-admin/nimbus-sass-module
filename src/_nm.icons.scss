@@ -273,8 +273,13 @@ h3.svgIcon::before{
   
 }
 //example of css template for new classes/images
-
-.svgIcon.TEMPLATE::before {
-    mask-image: url("data:image/svg+xml,--");
-    -webkit-mask-image: url("data:image/svg+xml,--");
-}
+//embeded encoded svg data
+// .svgIcon.TEMPLATE::before {
+//     mask-image: url("data:image/svg+xml,--");
+//     -webkit-mask-image: url("data:image/svg+xml,--");
+// }
+//link to file
+// .svgIcon.TEMPLATE::before {
+//     mask-image: url("../images/myIcon.svg");
+//     -webkit-mask-image: url("../images/myIcon.svg");
+// }

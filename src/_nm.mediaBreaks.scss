@@ -45,8 +45,47 @@
             transform: rotate(45deg) scale(1.3);
         }
     }
-  
 
+
+    @keyframes sideNav {
+        0%   {}
+        25%  {}
+        50%  {}
+        75%  {}
+        100% {height:auto;}
+    }
+    
+
+    .ui-panelmenu-content-wrapper {
+        position: absolute;
+        left: 105%;
+        z-index: 1;
+        top: 0;
+        width: 0;
+        transition: all 400ms;
+        li{
+            height: 2.1rem;
+            transition: all 400ms;
+            animation-name: sideNav;
+        }
+
+    }
+
+    .ui-panelmenu-panel:hover .ui-panelmenu-content-wrapper {
+        width: 350px;
+        opacity: 1;
+        li{
+            //height: auto;
+        }
+    }
+    nav.section-nav.globalNav .ui-panelmenu-panel .ui-panelmenu-content-wrapper {
+        max-height: 0;
+        width: inherit;
+    }
+    nav.section-nav.globalNav .ui-panelmenu-panel:hover .ui-panelmenu-content-wrapper {
+        max-height: 800px;  
+        overflow-y: auto;
+    }
   
 }
 @media screen and (min-width: 576px)  {
@@ -97,13 +136,8 @@
         -webkiit-transition: width 300ms;
         transition: width 300ms;
     }
-    .ui-panelmenu-content-wrapper {
-        position: absolute;
-        left: 105%;
-        width: 350px;
-        z-index: 1;
-        top: 0;
-    }
+    
+   
     .navbar-toggleable-md .navbar-collapse {
         z-index: 1;
         position: absolute;
@@ -135,9 +169,7 @@
     width: 350px;
 }
 @media screen and (min-width: 768px) {
-    // .header {
-    //     height: 80px;
-    // }
+
       
   
     .logo {
@@ -147,27 +179,12 @@
     .navbar-toggleable-md .navbar-collapse {
         width: 300px;
     }
+    
 }
 
 @media screen and (min-width: 992px) {
-    // html {
-    //     font-size: 14px;
-    //     line-height: 18px;
-    // }
-    //nav bar hiding methods...  
-    // .navbar-toggleable-md .navbar-toggler {
-    //     display: none;
-    // }
-    // .navbar-toggleable-md .navbar-collapse {
-    //     display: block;
-    //     width: 100%;
-    //     position: static;  
-    // }
-    .ui-panelmenu-content-wrapper{
-        width: auto;
-    }
-    .ui-menuitem-text {
 
+    .ui-menuitem-text {
         position: static;
         width: auto;
         height: auto;
@@ -195,18 +212,14 @@
     .section-nav{
         width: 13%;
     }
-    // .header {
-    //     height: 90px;
-    // }
+
 }
 
 @media screen and (min-width: 1200px) {
   
 }
 @media screen and (min-width: 1300px) {
-    // .header {
-    //     height: 100px;
-    // }
+
 
 }
 

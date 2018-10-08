@@ -286,6 +286,14 @@
                         .ui-menuitem-text {
                             white-space: nowrap;
                             text-overflow: ellipsis;
+                            clip: inherit;
+                            margin: inherit;
+                            opacity: inherit;
+                            padding: 0;
+                            position: static;
+                            transition: inherit;
+                            width: calc(100% - 2rem);
+                            display: inline-block;
                         }
                     }
                 }

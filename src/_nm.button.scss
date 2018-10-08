@@ -133,7 +133,13 @@ button:focus{
         margin-right: .3rem;
     }
 }
-
+// this allows title tag to show on hover of svg icon
+button.btn.btn-icon:before {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+}
 .btn.btn-icon, .icon-holder {
     padding: 0;
     background: transparent;

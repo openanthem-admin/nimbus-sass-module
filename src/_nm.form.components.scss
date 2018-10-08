@@ -58,6 +58,18 @@ label.custom-control.required{
 .ui-state-disabled span.ui-button-icon-left {
     color: $secondary-4;
 }
+
+// for text only looking readonly calendar format
+.readOnlyDate .ui-calendar .ui-widget:disabled + button.ui-datepicker-trigger {
+    display: none;
+}
+.readOnlyDate .ui-calendar .ui-widget:disabled {
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+}
+
+
 .ui-calendar input {
     width: calc(100% - 2.5rem);
 }
