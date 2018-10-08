@@ -909,6 +909,9 @@ nm-panelmenu {
         width: calc(100% - 2rem);
         word-wrap: break-word;
     }
+    .hassubmenu > a .ui-menuitem-text {
+        width: calc(100% - 4rem);
+    }
     .ui-panelmenu-panel{
         margin-bottom: .3rem;
         position: relative;
