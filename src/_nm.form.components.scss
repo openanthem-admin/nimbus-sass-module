@@ -76,7 +76,7 @@ label.custom-control.required{
 .ui-calendar .ui-clickable.pi.pi-calendar {
     font-size: 2.5rem;
 }
-.ui-calendar-timeonly:before {
+.ui-calendar-timeonly .pi-calendar:before {
     content: "\f017";
     font-family: "fontAwesome";
 }
