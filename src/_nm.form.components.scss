@@ -590,11 +590,12 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
         background-color: #fcf6d9;
         .ui-picklist-filter {
             padding-right: 40px;
+            text-indent: initial;
         }
-        span {
+        .ui-picklist-filter-icon {
             position: absolute;
             right: 1rem;
-            top: 1rem;
+            left: initial;
             color: #006bc2;
         }
     }
