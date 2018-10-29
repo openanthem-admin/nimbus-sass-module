@@ -16,26 +16,19 @@ fieldset:focus{
     border-color: $secondary-4;
     border-radius: 0;
 }
-.form-group.required label:after, label.required:after {
+.form-group.required label:after, 
+label.required:after,
+.textarea-holder.required label:after,
+.select-wrapper.required label:after,
+legend.required:after,
+label.custom-control.required:after {
     content: "*";
-    color: red;
+    color: $tertiary-4;
+    font-size: 2rem;
+    line-height: .5;
+    vertical-align: bottom;
 }
-.textarea-holder.required label:after {
-    content: "*";
-    color: red;
-}
-.select-wrapper.required label:after {
-    content: "*";
-    color: red;
-}
- legend.required:after {
-    content: "*";
-    color: red;
-}
-label.custom-control.required{
-    content: "*";
-    color: red;
-}
+ 
 .form-control[disabled]{
     border-color: $secondary-4;
     background-color: #d4d4d4;
@@ -592,16 +585,18 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     }
     .ui-picklist-caption {
         text-align: left;
+        border-radius: 0;
     }
     .ui-picklist-filter-container {
         background-color: #fcf6d9;
         .ui-picklist-filter {
             padding-right: 40px;
+            text-indent: initial;
         }
-        span {
+        .ui-picklist-filter-icon {
             position: absolute;
             right: 1rem;
-            top: 1rem;
+            left: initial;
             color: #006bc2;
         }
     }
