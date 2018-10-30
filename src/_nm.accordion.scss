@@ -64,6 +64,13 @@ p-accordiontab {
     color: #fff;
  }
 
+ nm-counter-message {
+    position: absolute;
+    text-align: right;
+    right: 1rem;
+    font-style: italic;
+ }
+
  p-accordiontab p-header {
      @extend .clearfix;
  }
