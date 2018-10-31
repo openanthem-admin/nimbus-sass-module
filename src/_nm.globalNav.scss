@@ -88,7 +88,7 @@
             button.dropdownTrigger {
                 background: $primary-5;
                 color: #fff;
-                border-bottom: 0px solid #eee;             
+                border-bottom: 0px solid #eee;            
                 &::after {
                     background: $primary-5;
                     border-color: $primary-5;
@@ -101,7 +101,7 @@
             button.dropdownTrigger {
                 background: $primary-4;
                 color: #fff;
-                border-bottom: 1px solid transparent;             
+                border-bottom: 1px solid transparent;            
                 &::after {
                     background: $primary-4;
                     border-color: $primary-4;
@@ -257,15 +257,11 @@
 .main-content.hasGlobalNav.withInfoBar {
     padding-top: 50px;
 }
-    nav.section-nav.globalNav {
-        position: absolute;
-        top: 90px;
-        left: 10px;
-        right: 80px;
+    nav.section-nav.globalNav {    
         height: auto;
-        width: auto;
-        margin: 0 -80px 0 -20px;
-        padding: 0 20px;
+        width: 100%;
+        margin: 0 ;
+        padding: 0;
         nm-panelmenu {
             display: flex;
             flex: 1;
@@ -294,6 +290,7 @@
                             transition: inherit;
                             width: calc(100% - 2rem);
                             display: inline-block;
+                            height: auto;
                         }
                     }
                 }
