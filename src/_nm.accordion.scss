@@ -63,7 +63,7 @@
         
         .accordionBtn {
             position: static;
-            @extend .clearFix;
+            @extend .clearfix;
             .btn-plain {
                 float: right;
             }
