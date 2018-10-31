@@ -244,8 +244,13 @@
     .globalNav{
         border-bottom: 1px solid $primary-2;
         background: #fff;
-        .ui-panelmenu-panel:hover .hassubmenu.ui-panelmenu-header + .ui-panelmenu-content-wrapper {
-            height: auto !important;
+        .ui-panelmenu-panel:hover .hassubmenu.ui-panelmenu-header {
+            &+ .ui-panelmenu-content-wrapper {
+                height: auto !important;
+            }
+            .fa-caret-right:before {
+                content: "\f0d7";
+            }
         }
         .ui-panelmenu-panel .hassubmenu.ui-panelmenu-header + .ui-panelmenu-content-wrapper {
             height: 0 !important;
