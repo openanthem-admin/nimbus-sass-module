@@ -63,12 +63,10 @@
         
         .accordionBtn {
             position: static;
-           // top: 0.2rem;
-            //right: 1rem;
-        }  
-        .accordionBtn .btn-plain:hover {
-            color: white;
-            text-decoration: underline;
+            @extend .clearfix;
+            .btn-plain {
+                float: right;
+            }
         }
         .ui-accordion-content-wrapper {
             border: 1px solid $primary-2;
@@ -83,15 +81,12 @@
     }
 }
 
-
-
 .panel-body {
     background: #fff;
     border: 1px solid $primary-6;
     padding:1rem;
 }
 //accordion styles
-
 
 .panel.panel-default {
     margin-top: 10px;
@@ -153,6 +148,5 @@
                 transform: rotate(90deg);
             }
         }
-                  
     }
 }
