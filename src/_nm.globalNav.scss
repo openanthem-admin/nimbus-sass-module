@@ -2,8 +2,6 @@
     //display:none; //hides at small screen
     padding-left: 1rem;
     height: auto;
-    z-index: 1;
-
     z-index: 22;
     .orgSelect{
         margin-left: 30px;
@@ -211,9 +209,6 @@
 }
 
 
-
-
-
 .title-con {
     .title{
         font-size: 1em;
@@ -221,8 +216,6 @@
         margin-left:10px;
     }
 }
-
-
 
 .scroll-to-top {
     position: fixed;
@@ -247,11 +240,16 @@
     }
 }
 
-
 @media screen and (min-width: 576px)  {
     .globalNav{
         border-bottom: 1px solid $primary-2;
         background: #fff;
+        .ui-panelmenu-panel:hover .hassubmenu.ui-panelmenu-header + .ui-panelmenu-content-wrapper {
+            height: auto !important;
+        }
+        .ui-panelmenu-panel .hassubmenu.ui-panelmenu-header + .ui-panelmenu-content-wrapper {
+            height: 0 !important;
+        }
     }
 // panel menu component to look like global nav
 .main-content.hasGlobalNav.withInfoBar {
