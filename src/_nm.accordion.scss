@@ -1,69 +1,152 @@
 .ui-accordion {
-    .ui-accordion-header {
-        background: $primary-2;
-        border: 1px solid $primary-2;
-        &.ui-state-default.ui-corner-all.ui-state-active {
+    p-accordiontab {
+        position: relative;
+        display: block;
+        .ui-accordion-header {
             background: $primary-2;
-        }
-    
-        a {
-            color: #fff;
-            .ui-accordion-toggle-icon {
-                font-size: 1.5rem;
-                line-height: 1;
-                margin-top: -4px;
+            border: 1px solid $primary-2;
+            &.ui-state-default.ui-corner-all.ui-state-active {
+                background: $primary-2;
             }
-            h2, h3, h4, h5, h6 {
-                font-size: 1rem;
+        
+            &>a {
+                color: #fff;
+                .ui-accordion-toggle-icon {
+                    font-size: 1.5rem;
+                    line-height: 1;
+                    margin-top: -4px;
+                }
+                h2, h3, h4, h5, h6 {
+                    font-size: 1rem;
+                    display: inline-block;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            &:not(.ui-state-active):not(.ui-state-disabled):hover {
+                background: $primary-2;
+                a{
+                    color: #fff;
+                }
+            }
+            
+            p-header {
+                @extend .clearfix;
+                nm-label {
+                    display: inline-block;
+                    width: 45%;
+                }
+                nm-counter-message {
+                    float: right;
+                    margin-left: .4rem;
+                    font-style: italic;
+                }
+                h2, h3 ,h4, h5 {
+                    display: inline-block;
+                    margin-bottom: 0;
+                    font-size: 1.2rem
+                }
+                .nm-accordion-headertext {
+                    float: right;
+                }
+                
+                .nm-accordion-headerimage {
+                    float: right;
+                }
+                
+                .nm-accordion-headerlabel {
+                    color: #fff;
+                }
+            }
+        }
+        
+        .accordionBtn {
+            position: static;
+            @extend .clearfix;
+            .btn-plain {
+                float: right;
+            }
+        }
+        .ui-accordion-content-wrapper {
+            border: 1px solid $primary-2;
+            margin-bottom: 1rem;
+            .ui-accordion-content{
+                padding: 1rem;
+                .cardBody:not(.toggleCard){
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.panel-body {
+    background: #fff;
+    border: 1px solid $primary-6;
+    padding:1rem;
+}
+//accordion styles
+
+.panel.panel-default {
+    margin-top: 10px;
+    & > .panel-heading {
+        background: $primary-2;
+        color: white;
+        padding: 0.3rem 0.3rem 0.3rem 1rem;
+        margin: 0;
+        position: relative;
+        h2{
+            font-weight: normal;
+            font-size: 1rem;
+            margin-bottom: 0;
+        
+        button {
+            all: inherit;
+            width:100%;
+            cursor: pointer;
+            background: none;
+            border: none;
+            text-align: left;
+            color: #fff;
+            &::before{
+                font-family: "FontAwesome";
+                content: "\f0da";
+                margin-right: .9rem;
+                transition: transform 400ms;
                 display: inline-block;
             }
         }
-    }
-    .ui-accordion-header:not(.ui-state-active):not(.ui-state-disabled):hover {
-        background: $primary-2;
-        a{
-            color: #fff;
+        
+            &:focus,&:hover{
+                &::before{
+                    color: #999;
+                }
+            }
+        }
+        .leftElement{
+            margin-left: 1rem;
+            font-size: .9rem;
+            font-weight: 200;
+        }
+        .rightElement{
+            position:absolute;
+            right: 6px;
+            top: 3px;
+            font-size: .9rem;
         }
     }
-    .ui-accordion-content-wrapper {
-        border: 1px solid $primary-2;
-        margin-bottom: 1rem;
-        .ui-accordion-content{
-            padding: 1rem;
-            .cardBody:not(.toggleCard){
-                padding: 0;
+    .panel-collapse {
+        padding-left: 50px;
+        //display: block;
+        padding-left: 0px;
+    }
+    &.openPanel {
+        & > .panel-heading {
+            button::before {
+                //content: "\f0d7";
+                transform: rotate(90deg);
             }
         }
     }
-  
 }
-
-.accordionBtn { 
-    position: absolute;
-    top: 0.2rem;
-    right: 1rem; 
-}   
-.accordionBtn .btn-plain:hover { 
-    color: white;
-    text-decoration: underline; 
-}
-p-accordiontab {
-    position: relative; 
-    display: block; 
-}
-
- .nm-accordion-headertext {
-    float: right;
- }
-
- .nm-accordion-headerimage {
-    float: right;
- }
-
- .nm-accordion-headerlabel {
-    color: #fff;
- }
-
- p-accordiontab p-header {
-     @extend .clearfix;
- }
