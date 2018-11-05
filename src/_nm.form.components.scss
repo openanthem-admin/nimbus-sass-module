@@ -84,10 +84,7 @@ input:-webkit-autofill {
 :focus{
     outline: $focus-outline-setting ; 
 }
-textarea.form-control {
-    word-break: break-word;
-    white-space: normal;
-}
+
 .charCount{
     color: #51A9DC;
 }
