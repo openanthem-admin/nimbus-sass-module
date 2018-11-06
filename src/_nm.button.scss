@@ -16,9 +16,10 @@ button:focus{
   }
   &.inline{
     display: inline-block;
-    padding-top: 2rem;
+    vertical-align: bottom;
   }
 }
+
 .btn:not(:disabled):not(.disabled), a:not(.disabled), button {
   cursor: pointer;
 }

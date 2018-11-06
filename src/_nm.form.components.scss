@@ -11,11 +11,16 @@ fieldset legend {
 //for IE remove focus outline
 fieldset:focus{
     outline: none;
-  }
+}
 .form-control{
     border-color: $secondary-4;
     border-radius: 0;
 }
+canvas.form-control {
+    width: initial;
+    height: initial;
+}
+
 .form-group.required label:after, 
 label.required:after,
 .textarea-holder.required label:after,
