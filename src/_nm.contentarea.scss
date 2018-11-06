@@ -382,6 +382,10 @@ nm-breadcrumb {
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
+span.colorBox1, span.colorBox2, span.colorBox3 {
+    display: block;
+    margin-bottom: 1rem;
+}
 
 .card-holder {
     position:relative;
