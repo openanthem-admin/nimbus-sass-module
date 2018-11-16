@@ -211,3 +211,62 @@
 		//@include rotate(-15);
 	}
 }
+
+
+.browserFixed {
+	.header {
+		position: fixed;
+	}
+	.wrapper {
+		position: fixed;
+		top: 100px;
+		bottom: 50px;
+		left: 20px;
+		right: 60px;
+		overflow: hidden;
+		min-height: 0;
+	}
+	.info-bar{
+		flex-basis: calc(100% - 10px);
+	}
+	.info-card {
+		overflow-y: scroll;
+		flex: 1;
+		height: 100%;
+		width: calc(87% - 1rem);
+		padding-right: 10px;
+	}
+	#main-content {
+		&> ng-component {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.section-nav {
+			width: 15%;
+			flex-basis: 15%;
+			overflow: auto;
+			height: 100%;
+			margin-right: 0;
+			padding-right: 10px;
+		}
+		nm-breadcrumb {
+			flex-basis: 100%;
+		}
+	}
+	footer.nm-footer:hover {
+		height: 200px;
+	}
+	footer.nm-footer {
+		position: fixed;
+		bottom: 0;
+		height: 20px;
+		min-height: 0;
+		transition: height 600ms;
+		transition-delay: 200ms;
+	}
+}
