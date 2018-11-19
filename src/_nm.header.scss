@@ -219,12 +219,13 @@
 	}
 	.wrapper {
 		position: fixed;
-		top: 100px;
+		top: 108px;
 		bottom: 50px;
 		left: 20px;
 		right: 60px;
 		overflow: hidden;
 		min-height: 0;
+		z-index: 3;
 	}
 	.info-bar{
 		flex-basis: calc(100% - 10px);
