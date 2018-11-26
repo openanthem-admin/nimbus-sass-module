@@ -210,6 +210,9 @@ fieldset.subquestion legend:first-of-type {
 }
 .form-inline{
     display:block; //override flex
+    .textWrapBreakWord {
+        margin-left: .5rem; // form textbox inline
+    }
 }
 .form-group.form-inline .form-checkrow {
   display: inline-block;

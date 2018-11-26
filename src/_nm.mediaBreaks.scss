@@ -74,9 +74,6 @@
     .ui-panelmenu-panel:hover .ui-panelmenu-content-wrapper {
         width: 350px;
         opacity: 1;
-        li{
-            //height: auto;
-        }
     }
     nav.section-nav.globalNav .ui-panelmenu-panel .ui-panelmenu-content-wrapper {
         max-height: 0;
@@ -88,8 +85,14 @@
     }
   
 }
+
+@media screen and (max-width: 575px)  {
+    .browserFixed .info-card.page-content {
+        height: auto !important;
+    }
+}
+
 @media screen and (min-width: 576px)  {
-   
     .section-nav,
     &.show,
     &.collapsing {
@@ -136,8 +139,6 @@
         -webkiit-transition: width 300ms;
         transition: width 300ms;
     }
-    
-   
     .navbar-toggleable-md .navbar-collapse {
         z-index: 1;
         position: absolute;
@@ -163,14 +164,77 @@
     .textWrapBreakWord{
         display: block;
     }
+    .browserFixed {
+        #footer-trigger {
+            display: block;
+        }
+        .header {
+            position: fixed;
+            top: 40px;
+            overflow: hidden;
+        }
+        .wrapper {
+            position: fixed;
+            top: 108px;
+            bottom: 50px;
+            left: 20px;
+            right: 60px;
+            overflow: hidden;
+            min-height: 0;
+            z-index: 3;
+        }
+        .info-bar{
+            flex-basis: calc(100% - 10px);
+        }
+        .info-card.page-content {
+            overflow-y: scroll;
+            flex: 1;
+            height: 100%;
+            width: calc(87% - 1rem);
+            padding-right: 10px;
+        }
+        #main-content {
+            &> ng-component {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .section-nav {
+                width: 15%;
+                flex-basis: 15%;
+                overflow: auto;
+                height: 100%;
+                margin-right: 0;
+                padding-right: 10px;
+            }
+            nm-breadcrumb {
+                flex-basis: 100%;
+            }
+        }
+        footer.nm-footer:hover {
+            height: 200px;
+        }
+        footer.nm-footer {
+            position: fixed;
+            bottom: 0;
+            height: 20px;
+            min-height: 0;
+            transition: height 600ms;
+            transition-delay: 200ms;
+            z-index: 4;
+        }
+    }
 }
 
 .navbar-toggleable-md .navbar-collapse {
     width: 350px;
 }
-@media screen and (min-width: 768px) {
 
-      
+@media screen and (min-width: 768px) {
   
     .logo {
         margin-left: 10px;
