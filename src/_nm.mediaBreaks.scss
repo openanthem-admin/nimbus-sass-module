@@ -86,8 +86,12 @@
   
 }
 
+.browserScroll #page-content {
+    height: auto !important;
+}
+
 @media screen and (max-width: 575px)  {
-    .browserFixed .info-card.page-content {
+    .browserFixed #page-content {
         height: auto !important;
     }
 }
@@ -167,15 +171,19 @@
     .browserFixed {
         #footer-trigger {
             display: block;
+            margin-left: 48%;
         }
         .header {
             position: fixed;
-            top: 40px;
+            height: 57px;
             overflow: hidden;
+            // .productName, .productName p {
+            //     max-width: initial;
+            // }
         }
         .wrapper {
             position: fixed;
-            top: 108px;
+            top: 60px;
             bottom: 50px;
             left: 20px;
             right: 60px;
@@ -215,7 +223,7 @@
                 flex-basis: 100%;
             }
         }
-        footer.nm-footer:hover {
+        footer.nm-footer.open {
             height: 200px;
         }
         footer.nm-footer {
