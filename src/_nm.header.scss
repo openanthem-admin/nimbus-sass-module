@@ -46,7 +46,8 @@
 	position: fixed;
 	z-index: 2;
 	right: 0;
-    left: 0;
+	left: 0;
+	top: 0;
 	a{
 		text-decoration: none;
 	}
@@ -61,7 +62,7 @@
 		font-size: 1.1rem;
 		font-weight: 400;
 		margin: 0;
-		max-width: 200px;
+		// max-width: 200px;
 		line-height: 1.2rem;
 	}
 	
