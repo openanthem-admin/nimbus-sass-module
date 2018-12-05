@@ -28,9 +28,63 @@ canvas.form-control {
     }
 }
 
-.cardBody{
-    padding: 1rem;
+// .cardBody{
+//     padding: 1rem;
+// }
+nm-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
 }
+
+.XSmall .card-holder,
+.Small .card-holder,
+.Medium .card-holder,
+.Large.withBorder .card-holder{
+        border: 1px solid $secondary-4;   
+        padding: 1rem ;
+}
+.XSmall{
+    @extend .col-sm-6;
+    @extend .col-md-3;
+   
+}
+.Small{
+    @extend .col-sm-6;
+    @extend .col-md-4;
+}
+.Medium{
+    @extend .col-sm-6;
+}
+.Large,
+.questionGroup{
+    @extend .col-12;
+}
+.Large.withBorder{
+    @extend .col-sm-12;
+}
+
+.XSmall,
+.Small,
+.Medium,
+.Large,
+.Large.withBorder{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: 1rem;
+}
+// for accordion card-details
+.ng-trigger.ng-trigger-accordionAnimation {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
 
 .borderCard{
     @extend .border-all;
