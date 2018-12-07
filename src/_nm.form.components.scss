@@ -125,7 +125,7 @@ input:-webkit-autofill {
 }
 
 .form-group {
-    margin-bottom: 0;
+    // margin-bottom: 0;
     padding-left: 0;
   p {
       margin-bottom: 0;
@@ -557,6 +557,9 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
 .twoColumn {
     @extend .col-sm-12;
     @extend .col-md-6; 
+}
+.oneColumn {
+    @extend .col-12;
 }
 .inline {
     @extend .d-inline-block;
