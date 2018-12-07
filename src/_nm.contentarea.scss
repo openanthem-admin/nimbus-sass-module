@@ -28,9 +28,63 @@ canvas.form-control {
     }
 }
 
-.cardBody{
-    padding: 1rem;
+// .cardBody{
+//     padding: 1rem;
+// }
+nm-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
 }
+
+.XSmall .card-holder,
+.Small .card-holder,
+.Medium .card-holder,
+.Large.withBorder .card-holder{
+        border: 1px solid $secondary-4;   
+        padding: 1rem ;
+}
+.XSmall{
+    @extend .col-sm-6;
+    @extend .col-md-3;
+   
+}
+.Small{
+    @extend .col-sm-6;
+    @extend .col-md-4;
+}
+.Medium{
+    @extend .col-sm-6;
+}
+.Large,
+.questionGroup{
+    @extend .col-12;
+}
+.Large.withBorder{
+    @extend .col-sm-12;
+}
+
+.XSmall,
+.Small,
+.Medium,
+.Large,
+.Large.withBorder{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-bottom: 1rem;
+}
+// for accordion card-details
+.ng-trigger.ng-trigger-accordionAnimation {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
 
 .borderCard{
     @extend .border-all;
@@ -495,16 +549,18 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
     margin-bottom: 0;
 }
 .label-left.align-right label {
+    width: 50%;
     text-align: right;
 }
 .label-left label {
-    width: 50%;
     display: inline-block;
     line-height: 1.2rem;
     padding-right: .6rem;
 }
-.label-left div.textWrapBreakWord {
+.label-left.align-right div.textWrapBreakWord {
     width: 50%;
+}
+.label-left div.textWrapBreakWord {
     display: inline-block;
     line-height: 1.2rem;
 }
