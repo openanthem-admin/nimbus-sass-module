@@ -467,3 +467,7 @@ margin-right: 10px;
 .ui-table .ui-table-thead > tr > th, .ui-table .ui-table-tfoot > tr > td {
     background-color: $tertiary-2;
 }
+
+.ui-table td.wrapGridValue>span{
+    white-space: normal;
+}
