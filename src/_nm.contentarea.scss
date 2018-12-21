@@ -75,6 +75,8 @@ nm-page-content {
 }
 // for accordion card-details
 .ng-trigger.ng-trigger-accordionAnimation {
+    overflow: hidden;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
@@ -439,6 +441,10 @@ nm-breadcrumb {
 span.colorBox1, span.colorBox2, span.colorBox3 {
     display: block;
     margin-bottom: 1rem;
+}
+
+.cardDetailsHeader {
+    display: flex;
 }
 
 .card-holder {
