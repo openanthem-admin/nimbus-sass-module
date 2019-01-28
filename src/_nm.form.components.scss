@@ -98,6 +98,16 @@ input:-webkit-autofill {
     margin-left: 20px;
 }
 
+form > nm-label {
+    flex-basis: 100%;
+    margin-left: 1.1rem;
+    margin-bottom: .5rem;
+}
+
+.form-group.label-offset-fix {
+	padding-top: 3rem;
+}
+
 //styling for form alerts.. 
 .form-group.alert {
   margin-bottom: .65rem;

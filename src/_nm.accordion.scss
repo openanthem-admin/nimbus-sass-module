@@ -81,6 +81,10 @@
     }
 }
 
+.ng-trigger.ng-trigger-accordionAnimation {
+	overflow: hidden;
+}
+
 .panel-body {
     background: #fff;
     border: 1px solid $primary-6;
