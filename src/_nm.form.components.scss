@@ -108,6 +108,11 @@ form > nm-label {
 	padding-top: 3rem;
 }
 
+p-editor.form-control {
+    height: auto;
+    border-width: 0;
+}
+
 //styling for form alerts.. 
 .form-group.alert {
   margin-bottom: .65rem;
