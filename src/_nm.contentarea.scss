@@ -40,7 +40,7 @@ nm-page-content {
 .XSmall .card-holder,
 .Small .card-holder,
 .Medium .card-holder,
-.Large.withBorder .card-holder{
+.card-holder.withBorder {
         border: 1px solid $secondary-4;   
         padding: 1rem ;
 }
@@ -75,6 +75,8 @@ nm-page-content {
 }
 // for accordion card-details
 .ng-trigger.ng-trigger-accordionAnimation {
+    overflow: hidden;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
@@ -145,6 +147,23 @@ body {
     font-size: 1rem;
 }
 //type styles from style guide
+
+nm-label {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card-header>nm-label {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-holder .card-header>nm-label h2.card-title,.card-holder .card-header>nm-label h3.card-title,.card-holder .card-header>nm-label h1.card-title {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 h1{
     font-size: 1.69rem;
@@ -441,6 +460,11 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
     margin-bottom: 1rem;
 }
 
+.cardDetailsHeader {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card-holder {
     position:relative;
     vertical-align: top;
@@ -570,6 +594,10 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
 .label-left.col-sm-4,
 .label-left.col-sm-3{
     margin-bottom: 0; 
+}
+
+.labelAbove label:first-of-type {
+    display: block;
 }
 
 // for assessment questions
