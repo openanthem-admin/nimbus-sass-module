@@ -1,7 +1,10 @@
-label{
+label {
     display: block;
     margin-bottom: .4rem;
     font-weight: bold;
+}
+.ui-dialog-title label {
+    display: inherit;
 }
 .checkboxHolder label {
     font-weight: normal;
