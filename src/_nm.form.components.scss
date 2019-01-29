@@ -1,7 +1,10 @@
-label{
+label {
     display: block;
     margin-bottom: .4rem;
     font-weight: bold;
+}
+.ui-dialog-title label {
+    display: inherit;
 }
 .checkboxHolder label {
     font-weight: normal;
@@ -740,3 +743,36 @@ nm-input-switch{
     }
 
 } 
+
+// Overrides for FlexBox begin
+.form-inline .ui-radiobutton,.form-inline .ui-chkbox {
+    margin-right: .6rem;
+    margin-bottom: .6rem;
+}
+    
+.form-inline .checkboxHolder {
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+.questionGroup .form-group {
+    margin-bottom: 2.5rem;
+}
+    
+.questionGroup .form-group .ui-dropdown, 
+.questionGroup .form-group input, 
+.questionGroup .form-group textarea {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+} 
+
+.form-group fieldset .form-checkrow label {
+    line-height: 1.1;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.form-group fieldset .form-checkrow {
+    margin-bottom: 0.2rem;
+}
+// End Overrides for FlexBox
