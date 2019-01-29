@@ -743,3 +743,26 @@ nm-input-switch{
     }
 
 } 
+
+// Overrides for FlexBox begin
+.form-inline .ui-radiobutton,.form-inline .ui-chkbox {
+    margin-right: .6rem;
+    margin-bottom: .6rem;
+}
+    
+.form-inline .checkboxHolder {
+    display: flex;
+    flex-wrap: wrap;
+}
+    
+.questionGroup .form-group {
+    margin-bottom: 2.5rem;
+}
+    
+.questionGroup .form-group .ui-dropdown, 
+.questionGroup .form-group input, 
+.questionGroup .form-group textarea {
+    width: calc(100% - 20px);
+    margin-left: 20px;
+} 
+// End Overrides for FlexBox
