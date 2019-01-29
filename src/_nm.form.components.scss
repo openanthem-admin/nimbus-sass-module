@@ -769,6 +769,10 @@ nm-input-switch{
 .form-group fieldset .form-checkrow label {
     line-height: 1.1;
     display: inline-block;
+    margin-bottom: 0;
 }
 
+.form-group fieldset .form-checkrow {
+    margin-bottom: 0.2rem;
+}
 // End Overrides for FlexBox
