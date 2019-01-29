@@ -765,4 +765,10 @@ nm-input-switch{
     width: calc(100% - 20px);
     margin-left: 20px;
 } 
+
+.form-group fieldset .form-checkrow label {
+    line-height: 1.1;
+    display: inline-block;
+}
+
 // End Overrides for FlexBox
