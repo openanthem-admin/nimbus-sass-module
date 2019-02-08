@@ -1,7 +1,8 @@
 
 nm-section {
-    margin-bottom: 20px;
-    display: block;
+   /*  margin-bottom: 20px;
+    display: block; */
+    width: 100%;
 }
 canvas.form-control {
     width: inherit;
@@ -28,15 +29,17 @@ canvas.form-control {
     }
 }
 
-// .cardBody{
-//     padding: 1rem;
-// }
 nm-page-content {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -.5rem;
 }
-
+nm-tile {
+    display: flex;
+}
+.card-holder {
+    flex-basis: 100%;
+}
 .XSmall .card-holder,
 .Small .card-holder,
 .Medium .card-holder,
@@ -73,39 +76,46 @@ nm-page-content {
     padding-right: .5rem;
     margin-bottom: 1rem;
 }
+
+
 // for accordion card-details
-.ng-trigger.ng-trigger-accordionAnimation {
+.ng-trigger-accordionAnimation {
     overflow: hidden;
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin: 0 -3px 0 -15px;
+}
+.ui-expanded-row-content .ng-trigger-accordionAnimation {
+    margin-left: 12px;
 }
 form {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
 }
+.cardBody .ng-trigger-accordionAnimation>span label {
+    margin-bottom: 0;
+}
 
+.cardBody .ng-trigger-accordionAnimation>span {
+    margin-bottom: 1rem;
+}
 
 .borderCard{
     @extend .border-all;
     padding: 1rem;
 }
-
 .toggleCard{
     position: relative;
     @extend .border-all;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 1rem 1rem 1rem 2rem;
     overflow: hidden;
-
     button.toggleTrigger{    
         font-size: 2rem;
         position: absolute;
         top: 8px;
         left: 6px;
-    
-    
         &::before {
             font-family: "FontAwesome";
             content: "\f0da";   
@@ -113,6 +123,9 @@ form {
     }
     &.openPanel button.toggleTrigger:before {
         content: "\f0d7";
+    }
+    .cardDetailsHeader {
+        margin: 0 -3px 0 -15px;
     }
 }
 
@@ -159,10 +172,14 @@ nm-label {
     padding-left: 0;
     padding-right: 0;
 }
-
+.card-header .topRight.buttonGroup{
+    top: 1rem;
+    right: 1rem;
+}
 .card-holder .card-header>nm-label h2.card-title,.card-holder .card-header>nm-label h3.card-title,.card-holder .card-header>nm-label h1.card-title {
     margin-left: 0;
     margin-right: 0;
+    margin-top: 0;
 }
 
 h1{
@@ -455,6 +472,10 @@ nm-breadcrumb {
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
+.colorBox4{
+    padding:1rem;
+    border: 1px solid $primary-2;
+}
 span.colorBox1, span.colorBox2, span.colorBox3 {
     display: block;
     margin-bottom: 1rem;
@@ -463,6 +484,7 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
 .cardDetailsHeader {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .card-holder {
@@ -472,10 +494,10 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
     padding-right: 0;
     .card-header{
         padding: 0;
-        margin-bottom: 0;
+        margin-bottom: .4rem;
         background: none;
         border-bottom: none;
-        h2.card-title {
+        .card-title {
             font-size: 1.2rem;
             display: inline-block;
             margin: .75rem;
@@ -758,7 +780,7 @@ $answerWidth: 99%-$questionWidth;
 }
 .form-group.questionGroup.form-grid {
     margin-bottom: .2rem;
-    margin-left: 4rem;
+    padding-left: 4rem;
 }
 
 .form-grid.headerRow fieldset .checkboxHolder .form-checkrow {

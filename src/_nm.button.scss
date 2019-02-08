@@ -18,7 +18,17 @@ button:focus{
     display: inline-block;
     vertical-align: bottom;
   }
+  &.topRight{
+    padding: 0 0;
+    top: 0rem;
+    right: 0rem;
+    .btn.btn-icon {
+      margin-right: 0;
+    }
+  }
 }
+
+
 
 .btn:not(:disabled):not(.disabled), a:not(.disabled), button {
   cursor: pointer;
