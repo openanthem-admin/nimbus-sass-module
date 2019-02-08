@@ -9,6 +9,7 @@ label {
 .checkboxHolder label {
     font-weight: normal;
 }
+
 fieldset legend {
     font-weight: bold;
 }
@@ -25,7 +26,7 @@ canvas.form-control {
     height: initial;
 }
 
-.form-group.required label:after, 
+.required label:after, 
 label.required:after,
 .textarea-holder.required label:after,
 .select-wrapper.required label:after,
@@ -100,14 +101,16 @@ input:-webkit-autofill {
 .questionGroup .charCount {
     margin-left: 20px;
 }
-
 form > nm-label {
     flex-basis: 100%;
-    margin-left: 1.1rem;
+    margin-left: 0;
     margin-bottom: .5rem;
 }
 
-.form-group.label-offset-fix {
+.justify-center form {
+    justify-content: center;
+}
+.label-offset-fix {
 	padding-top: 3rem;
 }
 
@@ -160,36 +163,33 @@ p-editor.form-control {
       .form-checkrow label {
         //max-width: 90%;
         line-height: 1.1;
+        display: inline-block;
+        margin-bottom: 0;
     }
   }
 }
-.form-group.form-6col .form-checkrow {
-    width: 16%;
-    display: inline-block;
+.form-6col .form-checkrow {
+    flex: 0 0 16%;
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-.form-group.form-5col .form-checkrow {
-    width: 20%;
-    display: inline-block;
+.form-5col .form-checkrow {
+    flex: 0 0 20%;
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-.form-group.form-4col .form-checkrow {
-    width: 25%;
-    display: inline-block;
+.form-4col .form-checkrow {
+    flex: 0 0 25%;
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-.form-group.form-3col .form-checkrow {
-    width: 33%;
-    display: inline-block;
+.form-3col .form-checkrow {
+    flex: 0 0 33%;
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-.form-group.form-2col .form-checkrow {
-    width: 50%;
-    display: inline-block;
+.form-2col .form-checkrow {
+    flex: 0 0 50%;
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
@@ -215,15 +215,19 @@ fieldset.subquestion legend:first-of-type {
     margin-bottom: 1rem;
     margin-left: -2rem;
 }
-.form-group.questionGroup.form-2col .form-checkrow label, 
-.form-group.questionGroup.form-3col .form-checkrow label, 
-.form-group.questionGroup.form-4col .form-checkrow label, 
-.form-group.questionGroup.form-5col .form-checkrow label,
-.form-group.questionGroup.form-6col .form-checkrow label {
+.questionGroup fieldset .checkboxHolder {
+    padding-left: 20px;
+}
+
+.questionGroup.form-2col .form-checkrow label, 
+.questionGroup.form-3col .form-checkrow label, 
+.questionGroup.form-4col .form-checkrow label, 
+.questionGroup.form-5col .form-checkrow label,
+.questionGroup.form-6col .form-checkrow label {
     width: calc(100% - 2rem);
 }
 // allows radio & checkbox components to stack instead of default inline-form
-.form-group.form-inline.stackedRadio .form-checkrow {
+/* .form-inline.stackedRadio .form-checkrow {
     display: block;
     margin-bottom: 1rem;
 }
@@ -233,10 +237,10 @@ fieldset.subquestion legend:first-of-type {
         margin-left: .5rem; // form textbox inline
     }
 }
-.form-group.form-inline .form-checkrow {
+.form-inline .form-checkrow {
   display: inline-block;
   margin-right: 1.3rem;
-}
+} */
 // allows inputs to align to right of label
 // use on fieldValue component @FieldValue(cols="1", iconField ="labelLeft")
 // .labelLeft { 
@@ -246,11 +250,24 @@ fieldset.subquestion legend:first-of-type {
 //         display: none;
 //     }
 // }
-.form-group.form-inline.legend-left.questionGroup {
+
+.checkboxHolder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.form-inline .checkboxHolder {
+    flex-direction: row;
+    .form-checkrow {
+        padding-right: 1rem;
+    }
+}
+
+.form-inline.legend-left.questionGroup {
     margin-bottom: 1rem;   
     padding: 0;
 }
-.form-group.form-inline.legend-left {
+.form-inline.legend-left {
     @extend .clearfix;
     legend {
         float: left;
@@ -413,9 +430,6 @@ p-dropdown.form-control {
     text-align: center;
 }
 
-// .form-group.questionGroup .ui-calendar input { 
-//     max-width: calc(300px - 2.5rem);
-// }
 .ui-inputtext { 
     
         padding: .375rem .75rem;
@@ -697,6 +711,7 @@ nm-input-switch{
         margin-bottom: 0;
         margin-top: .2rem;
         max-width: calc(100% - 60px);
+        display: inline-block;
     }
     &::before{
         display: block;
@@ -745,7 +760,7 @@ nm-input-switch{
 } 
 
 // Overrides for FlexBox begin
-.form-inline .ui-radiobutton,.form-inline .ui-chkbox {
+/* .form-inline .ui-radiobutton,.form-inline .ui-chkbox {
     margin-right: .6rem;
     margin-bottom: .6rem;
 }
@@ -774,5 +789,9 @@ nm-input-switch{
 
 .form-group fieldset .form-checkrow {
     margin-bottom: 0.2rem;
-}
+} */
 // End Overrides for FlexBox
+
+.addressHolder1 .form-group {
+    margin-bottom: 0;
+}
