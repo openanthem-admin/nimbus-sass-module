@@ -587,28 +587,40 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     @extend .col-sm-12;
     @extend .col-lg-2;
     @extend .col-md-4; 
+    .form-group {
+        margin-bottom: 0;
+    }
 }
 .fourColumn {
     @extend .col-sm-12;
     @extend .col-lg-3;
     @extend .col-md-6; 
+    .form-group {
+        margin-bottom: 0;
+    }
 }
 .threeColumn {
     @extend .col-sm-12;
     @extend .col-lg-4;
     @extend .col-md-4; 
+    .form-group {
+        margin-bottom: 0;
+    }
 }
 .twoColumn {
     @extend .col-sm-12;
     @extend .col-md-6; 
+    .form-group {
+        margin-bottom: 0;
+    }
 }
 .oneColumn {
     @extend .col-12;
+    .form-group {
+        margin-bottom: 0;
+    }
 }
-.inline {
-    @extend .d-inline-block;
-    @extend .mr-3;
-}
+
 /* For single checkbox */
 .custom-control-indicator {
     border: 1px solid #bbd3e8;
@@ -770,39 +782,7 @@ nm-input-switch{
 
 } 
 
-// Overrides for FlexBox begin
-/* .form-inline .ui-radiobutton,.form-inline .ui-chkbox {
-    margin-right: .6rem;
-    margin-bottom: .6rem;
-}
-    
-.form-inline .checkboxHolder {
-    display: flex;
-    flex-wrap: wrap;
-}
-    
-.questionGroup .form-group {
-    margin-bottom: 2.5rem;
-}
-    
-.questionGroup .form-group .ui-dropdown, 
-.questionGroup .form-group input, 
-.questionGroup .form-group textarea {
-    width: calc(100% - 20px);
-    margin-left: 20px;
-} 
-
-.form-group fieldset .form-checkrow label {
-    line-height: 1.1;
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-.form-group fieldset .form-checkrow {
-    margin-bottom: 0.2rem;
-} */
-// End Overrides for FlexBox
-
+//field-group formats
 .addressHolder1 .form-group {
     margin-bottom: 0;
 }
