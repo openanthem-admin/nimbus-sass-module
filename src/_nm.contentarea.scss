@@ -1,8 +1,24 @@
 
 nm-section {
-   /*  margin-bottom: 20px;
-    display: block; */
+    margin-bottom: 20px;
+    display: block; 
     width: 100%;
+}
+nm-tab{
+    .ui-tab-view{
+        background: transparent;
+        .ui-tabview-nav.ui-widget-header{
+            background: transparent;
+        }
+        .ui-tabview-panels {
+            background: #FFF;
+            border: 1px solid #CECECE;
+            border-radius: 4px;
+                .ui-tabview-panel > nm-section {
+                margin-bottom: 0;
+            }
+        }
+    } 
 }
 canvas.form-control {
     width: inherit;
@@ -747,9 +763,33 @@ $answerWidth: 99%-$questionWidth;
         width: 100%;
         text-align: center;
         position: static;
-        }
     }
-   
+}
+.form-checkrow {
+    margin-bottom: .5rem;
+}
+
+.form-grid.form-group.questionGroup legend:first-of-type {
+    margin-bottom: 0;
+}
+
+.form-grid p-radiobutton label {display: none;}
+
+.ui-radiobutton-box.ui-widget {
+    display: inline-block;
+}
+
+.ui-radiobutton {
+    flex: 1 1 100%;
+}
+ 
+p-checkbox, p-radiobutton {
+    display: flex;
+}
+
+.form-grid fieldset .checkboxHolder .form-checkrow p-checkbox {
+    display: inline-block;
+}
 .form-grid fieldset{
   padding:0;
   font-size: .9rem;

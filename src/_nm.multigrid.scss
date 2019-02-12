@@ -309,7 +309,9 @@ ng-component{
     min-height: 30px;
 }
 .ui-widget-header {
-    background: $primary-2;
+    &:not(.ui-editor-toolbar){
+        background: $primary-2;
+    }
     border: none;
     text-align: left;
     color: #fff;
