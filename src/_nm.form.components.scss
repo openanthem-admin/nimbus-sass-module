@@ -737,6 +737,7 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     }
 }
 
+
 nm-input-switch{
     label {
         margin-bottom: 0;
@@ -757,8 +758,11 @@ nm-input-switch{
             float: left;
         }
         &.right{
-           
             float: right;
+        }
+        &.down{
+            display: block;
+            margin-top: 0.3rem;
         }
         //unselected circle
         .ui-inputswitch .ui-inputswitch-slider:before {

@@ -97,10 +97,9 @@ nm-tile {
 // for accordion card-details
 .ng-trigger-accordionAnimation {
     overflow: hidden;
-    margin-top: 1rem;
+    margin: 1rem 0 0 0 ;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -3px 0 -15px;
 }
 .ui-expanded-row-content .ng-trigger-accordionAnimation {
     margin-left: 12px;
@@ -125,7 +124,7 @@ form {
 .toggleCard{
     position: relative;
     @extend .border-all;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
     overflow: hidden;
     button.toggleTrigger{    
         font-size: 2rem;
@@ -141,7 +140,7 @@ form {
         content: "\f0d7";
     }
     .cardDetailsHeader {
-        margin: 0 -3px 0 -15px;
+        margin: 0 ;
     }
 }
 
@@ -779,10 +778,6 @@ $answerWidth: 99%-$questionWidth;
     display: inline-block;
 }
 
-.ui-radiobutton {
-    flex: 1 1 100%;
-}
- 
 p-checkbox, p-radiobutton {
     display: flex;
 }
