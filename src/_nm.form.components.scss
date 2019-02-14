@@ -268,7 +268,12 @@ fieldset.subquestion legend:first-of-type {
 //         display: none;
 //     }
 // }
-
+nm-frm-grp.form-inline nm-input {
+    display: flex;
+}
+nm-frm-grp.form-inline nm-input nm-input-label {
+    padding-right: 1rem;
+}
 .checkboxHolder {
     display: flex;
     flex-wrap: wrap;

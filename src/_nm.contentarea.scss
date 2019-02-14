@@ -55,6 +55,7 @@ nm-tile {
 }
 .card-holder {
     flex-basis: 100%;
+    overflow: hidden;
 }
 .XSmall .card-holder,
 .Small .card-holder,
@@ -497,11 +498,13 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
 }
 
 .cardDetailsHeader {
-    display: flex;
+    display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
 }
-
+.cardBody > nm-label h1, .cardBody > nm-label h2, .cardBody > nm-label h2, .cardBody > nm-label h4, .cardBody > nm-label h5 {
+    display: inline-block;
+}
 .card-holder {
     position:relative;
     vertical-align: top;
