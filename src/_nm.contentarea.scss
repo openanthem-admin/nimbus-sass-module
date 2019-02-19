@@ -3,6 +3,10 @@ nm-section {
     margin-bottom: 20px;
     display: block; 
     width: 100%;
+    & > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 nm-frm-grp .fieldsetFlex:first-of-type {
     margin-left: -15px;
@@ -484,21 +488,25 @@ nm-breadcrumb {
 .form-holder {
     margin-bottom: 1.5rem;
 }
-.colorBox1 {
+.colorBox1:not(nm-card-details), 
+nm-card-details.colorBox1 > .cardBody  {
     padding: 1rem;
     border: 1px solid $primary-5;
 }
-.colorBox2 {
+.colorBox2:not(nm-card-details), 
+nm-card-details.colorBox2 > .cardBody {
     padding:1rem;
     border: 1px solid $primary-6;
     background: $primary-3;
 }
-.colorBox3 {
+.colorBox3:not(nm-card-details), 
+nm-card-details.colorBox3 > .cardBody {
     padding:1rem;
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
-.colorBox4{
+.colorBox4:not(nm-card-details), 
+nm-card-details.colorBox4 > .cardBody{
     padding:1rem;
     border: 1px solid $primary-2;
 }
