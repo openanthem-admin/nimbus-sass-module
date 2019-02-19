@@ -8,10 +8,10 @@ nm-section {
         flex-wrap: wrap;
     }
 }
-nm-frm-grp .fieldsetFlex:first-of-type {
+/* nm-frm-grp .fieldsetFlex:first-of-type {
     margin-left: -15px;
     margin-right: -15px;
-    }
+    } */
 
 nm-tab{
     .ui-tab-view{
@@ -103,7 +103,19 @@ nm-tile {
     margin-bottom: 1rem;
 }
 
-
+nm-card-details-field-group nm-card-details-field.oneColumn,
+nm-card-details-field-group nm-card-details-field.twoColumn,
+nm-card-details-field-group nm-card-details-field.threeColumn,
+nm-card-details-field-group nm-card-details-field.fourColumn,
+nm-card-details-field-group nm-card-details-field.sixColumn {
+    padding-left: 0;
+    padding-right: 0;
+}
+nm-card-details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+}
 // for accordion card-details
 .ng-trigger-accordionAnimation {
     overflow: hidden;
@@ -117,7 +129,7 @@ nm-tile {
 form {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    /* margin: 0 -15px; */
 }
 .cardBody .ng-trigger-accordionAnimation>span label {
     margin-bottom: 0;
@@ -887,11 +899,17 @@ p-checkbox, p-radiobutton {
             margin: 1px 0 0 0;
         }
     }
+    &:not(.form-inline){
+        input,
+        textarea,
+        .ui-dropdown{
+            margin-left: 20px;
+        }
+    }
     input,
     textarea,
     .ui-dropdown{
         width: calc(100% - 20px);
-        margin-left: 20px;
     }
     .ui-calendar input{
         width: calc(100% - 20px - 2.5rem);
