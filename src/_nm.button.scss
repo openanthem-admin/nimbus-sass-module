@@ -27,7 +27,9 @@ button:focus{
     }
   }
 }
-
+nm-button-group {
+  display: block;
+  }
 
 
 .btn:not(:disabled):not(.disabled), a:not(.disabled), button {

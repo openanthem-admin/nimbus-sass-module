@@ -12,7 +12,13 @@ label {
 .checkboxHolder label {
     font-weight: normal;
 }
-
+.fieldsetFlex{
+    display: flex;
+    flex-wrap: wrap;
+    & > nm-input-legend {
+        flex: 0 0 100%;
+    }
+}
 fieldset legend {
     font-weight: bold;
 }
@@ -181,7 +187,7 @@ p-editor.form-control[readonly] .ui-editor-toolbar {
       .form-checkrow label {
         //max-width: 90%;
         line-height: 1.1;
-        display: inline-block;
+        /* display: inline-block; */
         margin-bottom: 0;
     }
   }
@@ -233,41 +239,23 @@ fieldset.subquestion legend:first-of-type {
     margin-bottom: 1rem;
     margin-left: -2rem;
 }
-.questionGroup fieldset .checkboxHolder {
+/* .questionGroup fieldset .checkboxHolder {
+    padding-left: 20px;
+} */
+.questionGroup .fieldsetFlex:first-of-type nm-frm-grp {
     padding-left: 20px;
 }
-
-.questionGroup.form-2col .form-checkrow label, 
-.questionGroup.form-3col .form-checkrow label, 
-.questionGroup.form-4col .form-checkrow label, 
-.questionGroup.form-5col .form-checkrow label,
-.questionGroup.form-6col .form-checkrow label {
-    width: calc(100% - 2rem);
-}
-// allows radio & checkbox components to stack instead of default inline-form
-/* .form-inline.stackedRadio .form-checkrow {
-    display: block;
-    margin-bottom: 1rem;
-}
-.form-inline{
-    display:block; //override flex
-    .textWrapBreakWord {
-        margin-left: .5rem; // form textbox inline
-    }
-}
-.form-inline .form-checkrow {
-  display: inline-block;
-  margin-right: 1.3rem;
-} */
-// allows inputs to align to right of label
-// use on fieldValue component @FieldValue(cols="1", iconField ="labelLeft")
-// .labelLeft { 
-//     display:inline-block;
-//     margin-left: .6rem;
-//     &::after { //this removes psuedo after inherited from iconField class
-//         display: none;
-//     }
+// .questionGroup.form-2col .form-checkrow label, 
+// .questionGroup.form-3col .form-checkrow label, 
+// .questionGroup.form-4col .form-checkrow label, 
+// .questionGroup.form-5col .form-checkrow label,
+// .questionGroup.form-6col .form-checkrow label {
+//     width: calc(100% - 2rem);
 // }
+
+nm-input-checkbox {
+    width: 100%;
+}
 
 .checkboxHolder {
     display: flex;
@@ -275,56 +263,88 @@ fieldset.subquestion legend:first-of-type {
     flex-direction: column;
     align-items: flex-start;
 }
-.form-inline .checkboxHolder {
-    flex-direction: row;
-    .form-checkrow {
-        padding-right: 1rem;
+
+nm-frm-grp.form-inline{
+    span {
+        flex-basis: 100%;
+    }
+    label{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    nm-input {
+        flex-basis: 100%;
+        display: flex;
+         nm-input-label {
+            padding-right: 1rem;
+         }
+    }
+    .checkboxHolder {
+        flex-direction: row;
+        .form-checkrow {
+            padding-right: 1rem;
+        }
+    }
+    &.legend-left {
+        nm-input-legend{
+            padding-right: 20px;
+        }
+        &.questionGroup {
+            margin-bottom: 1rem;   
+            padding: 0;
+            &.form-grid{
+                padding-left: 4rem;
+                margin-bottom: .2rem;   
+                p-radiobutton {
+                    justify-content: center;
+                }
+            }
+            input {
+                width: auto;
+            }
+            .checkboxHolder {
+                padding-left: 0;
+            }
+        }
+        &.large-width,
+        &.large-width.form-grid{
+            nm-input-legend,
+            nm-input nm-input-label {
+                flex-basis: 50%;
+                margin-right: 1.3rem;
+            }
+            .checkboxHolder {
+                flex-basis: 45%;
+            }
+        }
+        &.med-width,
+        &.med-width.form-grid {
+            nm-input-legend,
+            nm-input nm-input-label {
+                flex-basis: 35%;
+                margin-right: 1.3rem;
+            }
+            .checkboxHolder {
+                flex-basis: 60%;
+            }
+        }
+        &.small-width,
+        &.small-width.form-grid {
+            nm-input-legend,
+            nm-input nm-input-label {
+                flex-basis: 25%;
+                margin-right: 1.3rem;
+            }
+            .checkboxHolder {
+                flex-basis: 70%;
+            }
+        }
+        &:hover {
+            background: #efefef;
+        }
     }
 }
 
-.form-inline.legend-left.questionGroup {
-    margin-bottom: 1rem;   
-    padding: 0;
-}
-.form-inline.legend-left {
-    @extend .clearfix;
-    legend {
-        float: left;
-        margin-right: 1.3rem;
-        width: auto;
-    }
-    .checkboxHolder {
-        float: left;
-        width: auto;
-    }
-    &.large-width {
-        legend {
-            width: 50%;
-        }
-        .checkboxHolder {
-            width: 45%;
-        }
-    }
-    &.med-width {
-        legend {
-            width: 35%;
-        }
-        .checkboxHolder {
-            width: 60%;
-        }
-    }
-    &.small-width {
-        legend {
-            width: 25%;
-        }
-        .checkboxHolder {
-            width: 70%;
-        }
-    }
-    &:hover {
-        background: #efefef;
-    }
-}
 
 
 p-dropdown.form-control {
@@ -598,6 +618,9 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     .form-group {
         margin-bottom: 0;
     }
+    p {
+        padding-left: 0;
+    }
 }
 .fourColumn {
     @extend .col-sm-12;
@@ -605,6 +628,9 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     @extend .col-md-6; 
     .form-group {
         margin-bottom: 0;
+    }
+    p {
+        padding-left: 0;
     }
 }
 .threeColumn {
@@ -614,6 +640,9 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     .form-group {
         margin-bottom: 0;
     }
+    p {
+        padding-left: 0;
+    }
 }
 .twoColumn {
     @extend .col-sm-12;
@@ -621,11 +650,17 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
     .form-group {
         margin-bottom: 0;
     }
+    p {
+        padding-left: 0;
+    }
 }
 .oneColumn {
     @extend .col-12;
     .form-group {
         margin-bottom: 0;
+    }
+    p {
+        padding-left: 0;
     }
 }
 

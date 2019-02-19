@@ -3,7 +3,16 @@ nm-section {
     margin-bottom: 20px;
     display: block; 
     width: 100%;
+    & > div {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
+nm-frm-grp .fieldsetFlex:first-of-type {
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+
 nm-tab{
     .ui-tab-view{
         background: transparent;
@@ -55,6 +64,7 @@ nm-tile {
 }
 .card-holder {
     flex-basis: 100%;
+    overflow: hidden;
 }
 .XSmall .card-holder,
 .Small .card-holder,
@@ -121,6 +131,13 @@ form {
     @extend .border-all;
     padding: 1rem;
 }
+.cardBody{
+    position: relative;
+    margin-bottom: 1rem;
+    nm-label {
+        padding-left: 15px;
+    }
+}
 .toggleCard{
     position: relative;
     @extend .border-all;
@@ -139,9 +156,7 @@ form {
     &.openPanel button.toggleTrigger:before {
         content: "\f0d7";
     }
-    .cardDetailsHeader {
-        margin: 0 ;
-    }
+    
 }
 
 
@@ -473,21 +488,25 @@ nm-breadcrumb {
 .form-holder {
     margin-bottom: 1.5rem;
 }
-.colorBox1 {
+.colorBox1:not(nm-card-details), 
+nm-card-details.colorBox1 > .cardBody  {
     padding: 1rem;
     border: 1px solid $primary-5;
 }
-.colorBox2 {
+.colorBox2:not(nm-card-details), 
+nm-card-details.colorBox2 > .cardBody {
     padding:1rem;
     border: 1px solid $primary-6;
     background: $primary-3;
 }
-.colorBox3 {
+.colorBox3:not(nm-card-details), 
+nm-card-details.colorBox3 > .cardBody {
     padding:1rem;
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
-.colorBox4{
+.colorBox4:not(nm-card-details), 
+nm-card-details.colorBox4 > .cardBody{
     padding:1rem;
     border: 1px solid $primary-2;
 }
@@ -497,11 +516,13 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
 }
 
 .cardDetailsHeader {
-    display: flex;
+    display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
+    margin: 0 ;
 }
-
+.cardBody > nm-label h1, .cardBody > nm-label h2, .cardBody > nm-label h2, .cardBody > nm-label h4, .cardBody > nm-label h5 {
+    display: inline-block;
+}
 .card-holder {
     position:relative;
     vertical-align: top;
@@ -684,7 +705,7 @@ legend {
 
 /* QUESTION WRAPPER */
 
-$questionWidth:40%;
+/* $questionWidth:40%;
 $answerWidth: 99%-$questionWidth;
 
 
@@ -734,26 +755,26 @@ $answerWidth: 99%-$questionWidth;
           vertical-align:bottom;
         }
     }
-}
+} */
 
-/* QUESTION WRAPPER */
 
-.form-grid.headerRow fieldset .checkboxHolder .form-checkrow .ui-widget {
+
+.form-grid.headerRow .fieldsetFlex .checkboxHolder .form-checkrow .ui-widget {
     display: none;
 }
-.form-grid.headerRow fieldset .checkboxHolder .form-checkrow label {
+.form-grid.headerRow .fieldsetFlex .checkboxHolder .form-checkrow label {
     display: block;
     font-weight: bold;
 }
-.form-grid.headerRow legend {
+.form-grid.headerRow nm-input-legend {
     font-weight: bold;
-    width: 44%;
-    margin-left: -4%;
+    flex-basis: 44%;
+    margin-left: 0;
 }
-.form-grid .questionGroup {
+.form-grid.questionGroup .fieldsetFlex {
     border-bottom: 1px dashed;
 }
-.form-group.form-grid.questionGroup.headerRow {
+.form-grid.questionGroup.headerRow .fieldsetFlex {
     border-bottom: 1px solid;
     padding-bottom: 0;
     margin-bottom: .6rem;
@@ -766,40 +787,36 @@ $answerWidth: 99%-$questionWidth;
 }
 .form-checkrow {
     margin-bottom: .5rem;
+    margin-top: .2rem;
 }
 
-.form-grid.form-group.questionGroup legend:first-of-type {
+.form-grid.questionGroup nm-input-legend:first-of-type {
     margin-bottom: 0;
 }
 
 .form-grid p-radiobutton label {display: none;}
 
-.ui-radiobutton-box.ui-widget {
+/* .ui-radiobutton-box.ui-widget {
     display: inline-block;
-}
+} */
 
 p-checkbox, p-radiobutton {
     display: flex;
 }
 
-.form-grid fieldset .checkboxHolder .form-checkrow p-checkbox {
+/* .form-grid fieldset .checkboxHolder .form-checkrow p-checkbox {
     display: inline-block;
-}
-.form-grid fieldset{
+} */
+.form-grid .fieldsetFlex {
   padding:0;
   font-size: .9rem;
-  legend {
-    width: $questionWidth;
-    float:left;
-    
-  }
+
   .checkboxHolder {
-    display: inline-table;
+/*     display: inline-table;
     table-layout: fixed;
-    width: $answerWidth; 
+    width: $answerWidth;  */
     .form-checkrow{
-            display: inline-block;
-            width: 20%;
+            flex: 0 0 20%;
             text-align: center;
             label{
                 visibility: hidden;
@@ -808,20 +825,20 @@ p-checkbox, p-radiobutton {
        
     }
   }
-  &.form-group.questionGroup {
+  &.questionGroup {
         padding: 0;
         margin: 0 20px;
     }
 }
-.form-group.questionGroup.form-grid {
+.questionGroup.form-grid {
     margin-bottom: .2rem;
     padding-left: 4rem;
 }
 
-.form-grid.headerRow fieldset .checkboxHolder .form-checkrow {
+/* .form-grid.headerRow fieldset .checkboxHolder .form-checkrow {
     vertical-align: bottom;
-}
-.form-grid:not(.headerRow) fieldset:hover {
+} */
+.form-grid:not(.headerRow) .fieldsetFlex:hover {
     background: #efefef;
 }
 .ui-dialog.ui-widget .ui-dialog-titlebar .ui-dialog-title {
@@ -849,8 +866,9 @@ p-checkbox, p-radiobutton {
     background: none;
     border: none;
 }
-.form-group.questionGroup  {
+.questionGroup  {
     margin-bottom: 2.5rem;
+    padding-left: 0;
     label {
         display: block;
         margin: .3rem 0;
