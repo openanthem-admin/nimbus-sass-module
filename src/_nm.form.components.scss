@@ -220,7 +220,7 @@ p-editor.form-control[readonly] .ui-editor-toolbar {
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-.form-2col .ui-radiobutton, 
+/* .form-2col .ui-radiobutton, 
 .form-3col .ui-radiobutton, 
 .form-4col .ui-radiobutton, 
 .form-5col .ui-radiobutton, 
@@ -228,7 +228,7 @@ p-editor.form-control[readonly] .ui-editor-toolbar {
     width: 1rem;
     margin-top: .2rem;
     vertical-align: top;
-}
+} */
 nm-input-radio {
     width: 100%;
 }
@@ -266,7 +266,12 @@ nm-input-checkbox {
     flex-direction: column;
     align-items: flex-start;
 }
-
+.labelAbove nm-input {
+    flex-direction: column;
+}
+nm-input-textarea {
+    flex: 0 0 100%;
+}
 nm-frm-grp.form-inline{
     span {
         flex-basis: 100%;
@@ -275,7 +280,7 @@ nm-frm-grp.form-inline{
         align-items: flex-start;
         justify-content: flex-start;
     }
-    nm-input {
+    nm-input,nm-input-textarea .textarea-holder {
         flex-basis: 100%;
         display: flex;
          nm-input-label {
@@ -289,11 +294,17 @@ nm-frm-grp.form-inline{
         }
     }
     &.legend-left {
+        &.align-right{
+            text-align: right;
+        }
         nm-input-legend{
             padding-right: 20px;
         }
+        input, textarea {
+            margin-left: 0;
+        }
         &.questionGroup {
-            margin-bottom: 1rem;   
+            /* margin-bottom: 1rem;  */  
             padding: 0;
             &.form-grid{
                 padding-left: 4rem;
@@ -302,8 +313,8 @@ nm-frm-grp.form-inline{
                     justify-content: center;
                 }
             }
-            input {
-                width: auto;
+            input, textarea {
+                flex: 1 1 auto;
             }
             .checkboxHolder {
                 padding-left: 0;
@@ -312,9 +323,10 @@ nm-frm-grp.form-inline{
         &.large-width,
         &.large-width.form-grid{
             nm-input-legend,
-            nm-input nm-input-label {
+            nm-input nm-input-label,
+            nm-input-textarea nm-input-label {
                 flex-basis: 50%;
-                margin-right: 1.3rem;
+                /* margin-right: 1.3rem; */
             }
             .checkboxHolder {
                 flex-basis: 45%;
@@ -323,9 +335,10 @@ nm-frm-grp.form-inline{
         &.med-width,
         &.med-width.form-grid {
             nm-input-legend,
-            nm-input nm-input-label {
+            nm-input nm-input-label,
+            nm-input-textarea nm-input-label {
                 flex-basis: 35%;
-                margin-right: 1.3rem;
+                /* margin-right: 1.3rem; */
             }
             .checkboxHolder {
                 flex-basis: 60%;
@@ -334,9 +347,10 @@ nm-frm-grp.form-inline{
         &.small-width,
         &.small-width.form-grid {
             nm-input-legend,
-            nm-input nm-input-label {
+            nm-input nm-input-label,
+            nm-input-textarea nm-input-label {
                 flex-basis: 25%;
-                margin-right: 1.3rem;
+                /* margin-right: 1.3rem; */
             }
             .checkboxHolder {
                 flex-basis: 70%;
@@ -347,7 +361,58 @@ nm-frm-grp.form-inline{
         }
     }
 }
+.form-grid.row-reverse  {
+    .fieldsetFlex {
+        flex-direction: row-reverse;
+        justify-content: flex-end; 
+        .checkboxHolder {
+            flex-basis: 100px;
+            flex-wrap: nowrap;
+        }
+        &>nm-input-legend {
+            flex: 1 1 auto;
+            padding-left: 1rem;
+            max-width: calc(100% - 100px);
+        }
+        .checkboxHolder .form-checkrow {
+            flex: 0 0 50px;
+            p-checkbox {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
 
+nm-frm-grp.headerRow .fieldsetFlex {
+    border-bottom: 1px solid ;
+}
+
+nm-frm-grp.headerRow .headerRow {
+    border-bottom: none;
+}
+nm-frm-grp.dataRow, 
+nm-frm-grp.headerRow {
+    margin-bottom: 0;
+    padding-top: .5rem;
+    .fieldsetFlex {
+        border-bottom: 1px dashed ;
+        .fieldsetFlex,
+        .form-grid.questionGroup.headerRow .fieldsetFlex {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+    nm-frm-grp.form-inline.legend-left.questionGroup {
+        margin-bottom: 0;
+    }
+}
+nm-frm-grp.dataRow:hover {
+    background: #efefef;
+}
+nm-frm-grp.headerRow .fieldsetFlex {
+    border-bottom: 1px solid ;
+}
 
 
 p-dropdown.form-control {
@@ -575,7 +640,7 @@ p-checkbox.ng-dirty.ng-invalid .ui-chkbox-box {
         }
     }
 }
-.ui-timepicker.ui-widget-header {
+.ui-timepicker.ui-widget-header:not(.ui-editor-toolbar) {
     background: $primary-3;
     color: #696b6c;
 }
@@ -835,4 +900,42 @@ nm-input-switch{
 //field-group formats
 .addressHolder1 .form-group {
     margin-bottom: 0;
+}
+// .addressStyle1 
+nm-frm-grp.form-inline.legend-left.small-width .addressStyle1{
+    nm-input-checkbox,
+    nm-input {
+        nm-input-label,
+        nm-input-legend {
+            flex-basis: auto;
+        }
+        input,
+        .checkboxHolder{
+            flex-grow: 1;
+        }
+    }
+    .custom-width nm-input nm-input-label {
+        flex-basis: 67px;
+    }
+}
+
+.questionGroup .addressStyle1 .fieldsetFlex:first-of-type nm-frm-grp {
+    padding-left: 0;
+}
+
+// qtyStyle1
+nm-frm-grp.form-inline.legend-left.qtyStyle1{
+    nm-input{
+        input {
+            width: 43px;
+            flex-grow: 0;
+        }
+        nm-input-label {
+            flex-basis: auto;
+        }
+    }
+}
+// input-grow
+nm-frm-grp.input-grow input{
+    flex-grow: 1;
 }
