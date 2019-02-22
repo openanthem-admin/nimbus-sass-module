@@ -506,24 +506,32 @@ nm-breadcrumb {
     margin-bottom: 1.5rem;
 }
 .colorBox1:not(nm-card-details), 
-nm-card-details.colorBox1 > .cardBody  {
+nm-card-details.colorBox1 > .cardBody,
+.colorBox1:not(nm-frm-grp), 
+nm-frm-grp.colorBox1 > .fieldsetFlex   {
     padding: 1rem;
     border: 1px solid $primary-5;
 }
 .colorBox2:not(nm-card-details), 
-nm-card-details.colorBox2 > .cardBody {
+nm-card-details.colorBox2 > .cardBody,
+.colorBox2:not(nm-frm-grp), 
+nm-frm-grp.colorBox2 > .fieldsetFlex  {
     padding:1rem;
     border: 1px solid $primary-6;
     background: $primary-3;
 }
 .colorBox3:not(nm-card-details), 
-nm-card-details.colorBox3 > .cardBody {
+nm-card-details.colorBox3 > .cardBody,
+.colorBox3:not(nm-frm-grp), 
+nm-frm-grp.colorBox3 > .fieldsetFlex  {
     padding:1rem;
     border: 1px solid $primary-5;
     background: $tertiary-6;
 }
 .colorBox4:not(nm-card-details), 
-nm-card-details.colorBox4 > .cardBody{
+nm-card-details.colorBox4 > .cardBody,
+.colorBox4:not(nm-frm-grp), 
+nm-frm-grp.colorBox4 > .fieldsetFlex {
     padding:1rem;
     border: 1px solid $primary-2;
 }
