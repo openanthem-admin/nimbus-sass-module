@@ -131,6 +131,10 @@ nm-card-details-grid {
 .ui-expanded-row-content .ng-trigger-accordionAnimation {
     margin-left: 12px;
 }
+.ui-accordion-content.ui-widget-content {
+    display: flex;
+    flex-wrap: wrap;
+}
 form {
     display: flex;
     flex-wrap: wrap;
