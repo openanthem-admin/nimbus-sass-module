@@ -229,7 +229,8 @@ ng-component{
         width: 40px;
     }
     td:not(.dropdown) .ui-cell-data,
-    td:not(.dropdown) > span {
+    td:not(.dropdown) > span,
+    td:not(.dropdown) > p-cellEditor > span {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
