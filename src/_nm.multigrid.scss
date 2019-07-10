@@ -15,7 +15,9 @@ ng-component{
     background: $primary-2;
 }
 
-
+.ui-expanded-row-content nm-card-details {
+    width: 100%;
+}
 .ui-expanded-row-content .scrollGrid .ui-datatable-scrollable-body, 
 .ui-expanded-row-content .ui-datatable .ui-datatable-scrollable-body,
 .ui-expanded-row-content .scrollGrid .ui-table-scrollable-body, 
