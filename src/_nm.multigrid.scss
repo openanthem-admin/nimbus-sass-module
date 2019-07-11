@@ -476,3 +476,68 @@ margin-right: 10px;
 .ui-table td.wrapGridValue>span{
     white-space: normal;
 }
+
+.buttonGroup.tableHeaderButton {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
+    padding: 0;
+}
+
+.buttonGroup.tableHeaderButton button.btn-plain {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.buttonGroup.tableHeaderButton button.btn-plain:hover {
+    color: #d9edfd;
+}
+
+button.btn-plain.fa.fa-plus {}
+
+.buttonGroup.tableHeaderButton button.btn-plain:hover:before {
+    text-decoration: none;
+}
+
+.buttonGroup.tableHeaderButton button.btn-plain:hover span {
+    text-decoration: underline;
+}
+
+.buttonGroup.tableHeaderButton {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 1;
+    padding: 0;
+    button.btn-plain {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        &:hover {
+            color: #d9edfd;
+            &::before {
+                text-decoration: none;
+            }
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+ 
+.withAddRow {
+    .ui-widget-header.ui-paginator{
+        .ui-paginator-bottom {
+            padding-right: 100px;
+        }
+        .ui-paginator-top {
+            right: 100px;
+        }
+    }
+}
+ 
+nm-table {
+    position: relative
+}
