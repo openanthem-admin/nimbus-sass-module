@@ -1,6 +1,6 @@
-@import "./custom";  //overrides bootstrap variables.
+/* @import "./custom";  //overrides bootstrap variables.
 @import "node_modules/bootstrap/scss/bootstrap";
-
+ */
 @import "./nm.nimbusvars";
 @import "./nm.header";
 @import "./nm.globalNav";
@@ -19,3 +19,5 @@
 @import "./nm.growl-messages";
 @import "./nm.treegrid";
 @import "./nm.mediaBreaks";
+/* @import "./nm.styles2";
+ */

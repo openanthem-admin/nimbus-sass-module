@@ -1,3 +1,15 @@
+.ui-widget-header{
+    .tooltip-container{
+        &.helpIcon{
+            .tooltip-trigger {
+                
+                &:hover::before{
+                    color: lightgrey;
+                }
+            }
+        }
+    }
+}
 .tooltip-container{
     display: inline-block;
     position: relative;
@@ -13,7 +25,7 @@
             &::before {
                 font-family: fontAwesome;
                 content: "\f059";
-                color: #aeaef7;
+                color: grey;
                 font-size: 1.2rem;
                 display: inline-block;
                 line-height: 1;
@@ -43,6 +55,7 @@
             border-left: 10px solid #cecece;
         }
     }
+    
 }
 
 .callout {

@@ -40,9 +40,9 @@
 
 .header {
 	height: 90px;
-	color: $secondary-1;
-	background: #fff;
-	border-bottom: 1px solid #578de1;
+	/* color: $secondary-1;
+	background: #fff; */
+	border-bottom: 1px solid grey;
 	position: fixed;
 	z-index: 2;
 	right: 0;
@@ -55,7 +55,7 @@
 		display: block;
 		height: 1rem;
 		content: "";
-		background-color: $secondary-1;
+		background-color: grey;
 	}
 	
 	.productName, .productName p {
@@ -67,7 +67,7 @@
 	}
 	
 	.subTitle p {
-		color:$tertiary-1;
+		color:grey;
 		font-size: 1rem;
 		margin-top: 0.2rem;
 	}
@@ -135,10 +135,7 @@
 			margin-bottom:0;
 		}
 
-		.form-control{
-			background-color: #217ECA;
-			border-color: #8FBEE4;
-		}
+		
 			
 		
 	}	  
@@ -188,7 +185,7 @@
 	.circle {
 		background-color:white;
 		position: absolute;
-		border:2px solid $secondary-1;    
+		border:2px solid grey;    
 		height:20px;
 		border-radius:50%;
 		-moz-border-radius:50%;

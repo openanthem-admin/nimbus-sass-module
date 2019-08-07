@@ -4,6 +4,7 @@ nm-form {
 nm-frm-grp {
     margin-bottom: 0.5rem;
 }
+
 label {
     display: block;
     margin-bottom: .4rem;
@@ -45,7 +46,7 @@ label.required:after,
 legend.required:after,
 label.custom-control.required:after {
     content: "*";
-    color: $tertiary-4;
+    color: red;
     font-size: 2rem;
     line-height: .5;
     vertical-align: bottom;
@@ -122,24 +123,22 @@ form > nm-label {
 .justify-center form {
     justify-content: center;
 }
-.label-offset-fix {
+.label-offset-fix { // use when field has no label
 	padding-top: 3rem;
 }
 
 p-editor.form-control {
     height: auto;
     border-width: 0;
-}
-
-p-editor.form-control[readonly] {
-    background-color: transparent;
-    padding: 0;
-}
-
-p-editor.form-control[readonly] .ui-editor-toolbar {
-    border: 0;
-    border-top: 1px solid #ccc;
-    padding: 0;
+    &[readonly] {
+        background-color: transparent;
+        padding: 0;
+        .ui-editor-toolbar {
+            border: 0;
+            border-top: 1px solid #ccc;
+            padding: 0;
+        }
+    }
 }
 
 //styling for form alerts.. 
@@ -174,7 +173,6 @@ p-editor.form-control[readonly] .ui-editor-toolbar {
 }
 
 .form-group {
-    // margin-bottom: 0;
     padding-left: 0;
   p {
       margin-bottom: 0;
@@ -220,15 +218,7 @@ p-editor.form-control[readonly] .ui-editor-toolbar {
     padding-right: .5rem;
     margin-bottom: .6rem;
 }
-/* .form-2col .ui-radiobutton, 
-.form-3col .ui-radiobutton, 
-.form-4col .ui-radiobutton, 
-.form-5col .ui-radiobutton, 
-.form-6col .ui-radiobutton {
-    width: 1rem;
-    margin-top: .2rem;
-    vertical-align: top;
-} */
+
 nm-input-radio {
     width: 100%;
 }
@@ -242,20 +232,9 @@ fieldset.subquestion legend:first-of-type {
     margin-bottom: 1rem;
     margin-left: -2rem;
 }
-/* .questionGroup fieldset .checkboxHolder {
-    padding-left: 20px;
-} */
 .questionGroup .fieldsetFlex:first-of-type nm-frm-grp {
     padding-left: 20px;
 }
-// .questionGroup.form-2col .form-checkrow label, 
-// .questionGroup.form-3col .form-checkrow label, 
-// .questionGroup.form-4col .form-checkrow label, 
-// .questionGroup.form-5col .form-checkrow label,
-// .questionGroup.form-6col .form-checkrow label {
-//     width: calc(100% - 2rem);
-// }
-
 nm-input-checkbox {
     width: 100%;
 }
@@ -422,15 +401,7 @@ p-dropdown.form-control {
     line-height: 1.5;
     margin-top: -.1rem;
     .ui-widget-content {
-        border: 1px solid #9dd3f7;
-        background: #ecf7ff;
         border-radius: 0;
-    }
-    .ui-state-highlight,
-    .ui-dropdown-panel .ui-dropdown-item:not(.ui-state-highlight):hover {
-        border-color: #4a90e2;
-        background: #4a90e2;
-        color: #FFFFFF;
     }
 }
 .ui-dropdown {
@@ -703,7 +674,6 @@ input.custom-control-input:disabled ~ .custom-control-indicator,
 }
 .threeColumn {
     @extend .col-sm-12;
-    @extend .col-lg-4;
     @extend .col-md-4; 
     .form-group {
         margin-bottom: 0;

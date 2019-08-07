@@ -73,7 +73,7 @@ nm-tile {
 .Small .card-holder,
 .Medium .card-holder,
 .card-holder.withBorder {
-        border: 1px solid $secondary-4;   
+        border: 1px solid lightgrey;   
         padding: 1rem ;
 }
 .XSmall{
@@ -165,11 +165,12 @@ form {
     button.toggleTrigger{    
         font-size: 2rem;
         position: absolute;
-        top: 8px;
+        top: 2px;
         left: 6px;
         &::before {
             font-family: "FontAwesome";
-            content: "\f0da";   
+            content: "\f0da";
+            position: static;   
         }
     }
     &.openPanel button.toggleTrigger:before {
@@ -338,7 +339,7 @@ h1.page-title {
     font-weight: 400;
     &::before{
         font-size: 1.9rem;
-        color: $iconColor;
+       /*  color: $iconColor; */
         font-family: fontAwesome;
         margin-right: .3rem;
     }
@@ -415,9 +416,6 @@ svg.logo {
 .clinicalInfoIcon::before{
     content: "\F0fa";
 }
-// .col-xs-12 {
-//     margin: 0 0; //override correction for inline-block fix
-// }
 
 .wrapper {
     min-height: 700px;
@@ -435,8 +433,8 @@ nm-breadcrumb {
     padding: 0;
     .breadcrumb-bar{
         padding: 0.5rem;
-        background: #fff;
-        ol{
+/*         background: #fff;
+ */        ol{
             margin-bottom: 0;
             padding: 0;
         }
@@ -459,22 +457,22 @@ nm-breadcrumb {
         }
         .breadcrumb-item:last-child > a {
             text-decoration: none;
-            color: #0275d8;
+            /* color: #d3d6d8; */
             cursor: default;
         }
         .breadcrumb-item>a {
             text-decoration: none;
-            color: #373a3c;
+            /* color: #373a3c; */
         }    
         .breadcrumb-item>a:hover:not(:last-child) {
-            text-decoration: underline;
-            color: #e5991c;
+           /*  text-decoration: underline;
+            color: #e5991c; */
         }
     }
 }
 .info-bar {
     display: block;
-    color: $primary-4;
+    /* color: $primary-4; */
     font-size: 1.09rem;
     min-height: 60px;
     margin: 0 0px 10px 0;
@@ -512,36 +510,47 @@ nm-card-details.colorBox1 > .cardBody,
 .colorBox1:not(nm-frm-grp), 
 nm-frm-grp.colorBox1 > .fieldsetFlex   {
     padding: 1rem;
-    border: 1px solid $primary-5;
+    border: 1px solid black;
 }
 .colorBox2:not(nm-card-details), 
 nm-card-details.colorBox2 > .cardBody,
 .colorBox2:not(nm-frm-grp), 
 nm-frm-grp.colorBox2 > .fieldsetFlex  {
     padding:1rem;
-    border: 1px solid $primary-6;
-    background: $primary-3;
+    border: 1px solid grey;
+    background: lightgrey;
 }
 .colorBox3:not(nm-card-details), 
 nm-card-details.colorBox3 > .cardBody,
 .colorBox3:not(nm-frm-grp), 
 nm-frm-grp.colorBox3 > .fieldsetFlex  {
     padding:1rem;
-    border: 1px solid $primary-5;
-    background: $tertiary-6;
+    border: 1px solid black;
+    background: lightgrey;
 }
 .colorBox4:not(nm-card-details), 
 nm-card-details.colorBox4 > .cardBody,
 .colorBox4:not(nm-frm-grp), 
 nm-frm-grp.colorBox4 > .fieldsetFlex {
     padding:1rem;
-    border: 1px solid $primary-2;
+    border: 1px solid black;
 }
 span.colorBox1, span.colorBox2, span.colorBox3 {
     display: block;
     margin-bottom: 1rem;
 }
-
+.colorBox2:not(nm-card-details)>span, 
+.colorBox2:not(nm-frm-grp)>span {
+    border: none;
+}
+.colorBox3:not(nm-card-details)>span, 
+.colorBox3:not(nm-frm-grp)>span {
+    border: none; 
+}
+.colorBox4:not(nm-card-details)>span, 
+.colorBox4:not(nm-frm-grp)>span {
+    border: none; 
+}
 .cardDetailsHeader {
     display: flex;
     flex-wrap: wrap;
@@ -591,7 +600,7 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
 .smallCard,
 .mediumCard,
 .largeCard.withBorder {
-        border: 1px solid $secondary-4;   
+        border: 1px solid grey;   
         padding: 1rem ;
 }
 .XsmallCard{
@@ -638,10 +647,10 @@ span.colorBox1, span.colorBox2, span.colorBox3 {
     font-size: 1rem;
 }
 .ui-widget-content{
-    color : $primary-4;
+    color : black;
 }
 .ui-widget-content a {
-    color: $primary-1;
+    /* color: $primary-1; */
 }
 .ui-datepicker.ui-widget-content a {
     color: #696b6c;
@@ -875,10 +884,7 @@ p-checkbox, p-radiobutton {
     padding: .5rem;
     border-radius: 0;
 }
-.ui-dialog .ui-dialog-titlebar-close span::before{
-    // content: "\f057";
-    color: #fff;
-}
+
 .ui-dialog .ui-dialog-titlebar-icon:hover .fa-close:before {
     color: $primary-2;
 }
@@ -965,7 +971,7 @@ p-checkbox, p-radiobutton {
     color: $primary-5;
 }
 .ui-messages-error{
-    color: #a94442;
+    color: red;
     .fa-close::before{
         content:"\F071";
     }
@@ -1113,9 +1119,9 @@ nm-panelmenu {
         position: relative;
     }
     .ui-panelmenu-header-link {
-        background: #d9edfd;
+        /* background: #d9edfd;
         color: $primary-4;
-        border: 1px solid #B8D4E8;
+        border: 1px solid #B8D4E8; */
         svg {
             height: 1.4rem;
             width: 1.4rem;
@@ -1139,19 +1145,19 @@ nm-panelmenu {
     .ui-panelmenu-header .ui-state-active, 
     .ui-panelmenu-header.ui-state-active a.ui-panelmenu-header-link,
     .ui-panelmenu-header a.ui-panelmenu-header-link.ui-state-active:hover  {
-        background: $primary-5;
+        /* background: $primary-5;
         border-color: $primary-5;
-        color: #fff;
+        color: #fff; */
     
     }
     .ui-panelmenu-header a.ui-panelmenu-header-link:hover  {
-        background: $primary-4;
+       /*  background: $primary-4;
         border-color: $primary-4;
-        color: #fff;
+        color: #fff; */
     }
     .ui-menuitem-icon {
         font-size: 1.4rem;
-        color: $primary-4;
+       /*  color: $primary-4; */
     }
     .ui-state-active .ui-menuitem-icon {
         color: #fff;
@@ -1160,11 +1166,11 @@ nm-panelmenu {
     .ui-panelmenu-content {
         padding: 0;
         .ui-menuitem-link {
-            color: $primary-4;
+           /*  color: $primary-4; */
         }
         .ui-menuitem-link:hover,
         .ui-menuitem-link.ui-state-active {
-            background: $tertiary-5;
+           /*  background: $tertiary-5; */
         }
         .ui-submenu-list {
             .ui-menuitem-link:hover .ui-menuitem-icon {
@@ -1172,19 +1178,19 @@ nm-panelmenu {
             }
             .ui-menuitem-link + nm-panelmenusub .ui-menuitem-icon, 
             .ui-menuitem-link:hover + nm-panelmenusub .ui-menuitem-icon {
-                color: $primary-4;
+                /* color: $primary-4; */
             }
             .ui-submenu-list {
                     background: transparent;
                 .ui-menuitem-link:hover,
                 .ui-menuitem-link.ui-state-active {
                     background: none;
-                    color: #ef991c;
+                    /* color: #ef991c; */
                     .ui-menuitem-icon {
-                        color: #ef991c;
+                        /* color: #ef991c; */
                     }
                     .ui-panelmenu-icon.fa-caret-down{
-                        color: #ef991c;
+                        /* color: #ef991c; */
                     }
                     .nm-panelmenu-headerimage{
                         color: inherit;
@@ -1194,9 +1200,9 @@ nm-panelmenu {
         }
     }
     nm-panelmenusub {
-        background: $tertiary-6;
+        background: #fff;
         display: block;
-        border: 1px solid $primary-5;
+        border: 1px solid grey;
         nm-panelmenusub {
             border: none;
         }
@@ -1204,13 +1210,15 @@ nm-panelmenu {
     .nm-panelmenu-headerimage {
         float: left;
         margin-right: .6rem;
-        color: $primary-2;
+        /* color: $primary-2; */
         font-size: 1.3rem;
+        line-height: 1;
+        padding-top: .2rem;
     }
 
     .ui-state-active .nm-panelmenu-headerimage,
     a:hover .nm-panelmenu-headerimage {
-        color: #fff;
+       /*  color: #fff; */
     }
 
     .ui-panelmenu-icon {
@@ -1218,17 +1226,17 @@ nm-panelmenu {
         font-size: 1.6rem;
         width: 1rem;
         &.fa-caret-down {
-            color: #fff;
+           /*  color: #fff; */
         }
     }
 
     .ui-panelmenu-header:not(.ui-state-active):hover {
-        background: $primary-4;
+        background: lightgrey;
             .ui-menuitem-icon{
-                color: #fff;
+               /*  color: #fff; */
             }
             a {
-                color: #fff;
+                /* color: #fff; */
             }
      }
      .ui-panelmenu-content>.ui-panelmenu-root-submenu>.ui-submenu-list > li a {
@@ -1245,36 +1253,36 @@ nm-panelmenu {
     .nav-link{
         display: block;
         padding: .4rem;
-        background: #d9edfd;
+        /* background: #d9edfd;
         color: $primary-4;
-        border: 1px solid #B8D4E8;
+        border: 1px solid #B8D4E8; */
         margin-bottom: 3px;
         &::before{
             font-size: 1.4rem;
-            color: $primary-2;
+            /* color: $primary-2; */
             font-family: fontAwesome;
             margin-right: .3rem;
         }
         &.active,
         {
-            background: $primary-5;
+           /*  background: $primary-5;
             border-color: $primary-5;
-            color: #fff;
+            color: #fff; */
             &::before {
-                color: #fff;
+                /* color: #fff; */
             }
         }
         &:hover{
-            background: $primary-4;
+           /*  background: $primary-4;
             border-color: $primary-4;
-            color: #fff;
+            color: #fff; */
             &::before {
-                color: #fff;
+                /* color: #fff; */
             }
         }
         &.disabled,&.disabled:hover{
-            background: #999;
-            color: #fff;
+           /*  background: #999;
+            color: #fff; */
         }
     
         &.toggle.collapsed:after {
@@ -1359,8 +1367,8 @@ p-accordiontab p-header h2 {
 }
 
 .panel-body {
-    background: #fff;
-    border: 1px solid $primary-6;
+    /* background: #fff; */
+    border: 1px solid lightgrey;
     padding:1rem;
 }
 //accordion styles
@@ -1371,8 +1379,8 @@ p-accordiontab p-header h2 {
 .panel.panel-default {
     margin-top: 10px;
     & > .panel-heading {
-        background: $primary-2;
-        color: white;
+        /* background: $primary-2;
+        color: white; */
         padding: 0.3rem 0.3rem 0.3rem 1rem;
         margin: 0;
         position: relative;
@@ -1388,7 +1396,7 @@ p-accordiontab p-header h2 {
             background: none;
             border: none;
             text-align: left;
-            color: #fff;
+            /* color: #fff; */
             &::before{
                 font-family: "FontAwesome";
                 content: "\f0da";

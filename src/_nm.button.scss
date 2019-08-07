@@ -36,53 +36,51 @@ nm-button-group {
   cursor: pointer;
 }
 .btn-primary {
-  background: $primary-5;
+  /* background: $primary-5;
   border-color: $primary-5;
-  color:#fff;
+  color:#fff; */
   line-height: 1;
   margin-right: 9px;
   margin-left: 9px;
   margin-bottom: 1rem;
   padding: .6rem 1.4rem;
-  border-radius: .5rem;
   &:hover:not([disabled]),
   &:focus{
-    background-color: $primary-2;
-    border-color: $primary-2;
+    /* background-color: $primary-2;
+    border-color: $primary-2; */
   }
   &:active:not([disabled]),
   &.active:not([disabled]){
-    background-color: $primary-2;
-    border-color: $primary-2;
+    /* background-color: $primary-2;
+    border-color: $primary-2; */
   }
   &[disabled]{
-    background-color: $secondary-4;
-    border-color: $secondary-4;
+    /* background-color: $secondary-4;
+    border-color: $secondary-4; */
   }
 }
 .btn-secondary {
-  background: #707070;
+  /* background: #707070;
   border-color: #707070;
-  color:#fff;
+  color:#fff; */
   line-height: 1;
   margin-right: 9px;
   margin-left: 9px;
   margin-bottom: 1rem;
   padding: .6rem 1.4rem;
-  border-radius: .5rem;
   &:hover:not([disabled]),
   &:focus{
-    background-color: $tertiary-1;
-    border-color: $tertiary-1;
+    /* background-color: $tertiary-1;
+    border-color: $tertiary-1; */
   }
   &:active:not([disabled]),
   &.active:not([disabled]){
-    background-color: $tertiary-1;
-    border-color: $tertiary-1;
+    /* background-color: $tertiary-1;
+    border-color: $tertiary-1; */
   }
   &[disabled]{
-    background-color: $secondary-4;
-    border-color: $secondary-4;
+    /* background-color: $secondary-4;
+    border-color: $secondary-4; */
   }
 }
 .ui-datatable-header .btn-plain{
@@ -123,13 +121,13 @@ nm-button-group {
     background: none;
     text-transform: initial;
     text-decoration: underline;
-      color:#006bc2;
+      /* color:#006bc2; */
     line-height:1.5;
     &:hover,
     &:active,
     &.active,
     &:focus{
-      color: $primary-5;
+      /* color: $primary-5; */
       background: none;
     }
     &:focus{
@@ -155,8 +153,8 @@ button.btn.btn-icon:before {
 }
 .btn.btn-icon, .icon-holder {
     padding: 0;
-    background: transparent;
-    color:#006bc2;
+    /* background: transparent;
+    color:#006bc2; */
     i, .fa {
       font-size: 1.5rem;
     }
@@ -167,7 +165,7 @@ button.btn.btn-icon:before {
   &:hover,
   &.active,
   &:focus{
-    color: $primary-5;
+    /* color: $primary-5; */
     background: none;
   }
   &:focus{
@@ -209,11 +207,11 @@ button.btn.btn-icon:before {
   }
   &:hover,
   &.active {
-      color: #014c8c;
+      /* color: #014c8c; */
       .tag{
-        border-color: #034b7c;
-        background-color: #fff;
-        color: #034b7c;
+        /* border-color: #034b7c; */
+        /* background-color: #fff; */
+        /* color: #034b7c; */
         font-weight: 600;
         font-size: 1rem;
         padding-top: 0;

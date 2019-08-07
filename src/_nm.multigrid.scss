@@ -12,22 +12,19 @@ ng-component{
     background: darkgrey;
 }
 .scrollGrid .ui-datatable-tablewrapper {
-    background: $primary-2;
+   /*  background: $primary-2; */
 }
 
-.ui-expanded-row-content nm-card-details {
-    width: 100%;
-}
+
 .ui-expanded-row-content .scrollGrid .ui-datatable-scrollable-body, 
 .ui-expanded-row-content .ui-datatable .ui-datatable-scrollable-body,
 .ui-expanded-row-content .scrollGrid .ui-table-scrollable-body, 
 .ui-expanded-row-content .ui-table .ui-table-scrollable-body {
     min-height: 0px;
 }
-.ui-table .ui-sortable-column.ui-state-highlight {
-    background: #b3dcfc;
-    color: #4d4c57;
-}
+/* .ui-table .ui-sortable-column.ui-state-highlight {
+
+} */
 .ui-table,.ui-datatable {
     position: static;
     font-size: 1rem;
@@ -37,11 +34,10 @@ ng-component{
    
     
     th.ui-state-default{
-        background: $secondary-5;
+       /*  background: $secondary-5; */
         color: #4d4c57;
     }
     th.ui-state-active{
-        background: #b3dcfc;
     }
     .ui-table-tbody > tr > td,
     .ui-datatable-data > tr > td {
@@ -51,7 +47,7 @@ ng-component{
       
         &.ui-widget-content.ui-table-even,
         &.ui-widget-content.ui-datatable-even {
-            background-color: $primary-3;
+            background-color: lightgrey;
            
         }
         &.ui-widget-content.ui-table-odd,
@@ -71,17 +67,12 @@ ng-component{
         font-size: .8rem;
         padding: 0;
     }
-    th.ui-sortable-column:not(.ui-state-active):hover {
-        background-color: #b3dcfc;
+   
+    /* .ui-sortable-column.ui-state-highlight {
         .ui-sortable-column-icon {
-            color: $primary-4;
+            color: black;
         }
-    }
-    .ui-sortable-column.ui-state-highlight {
-        .ui-sortable-column-icon {
-            color: $primary-5;
-        }
-    }
+    } */
     .col-icon {
         width: 30px;
     }
@@ -96,7 +87,7 @@ ng-component{
         color: $primary-4;
     }
     .ui-table-thead > tr:nth-child(2) th {
-        background: #b8d4e8;
+        background:grey;
     }
     .ui-table-thead > tr:nth-child(2) th span {
         padding: 0;
@@ -134,10 +125,10 @@ ng-component{
                 background: transparent;
                 border: none;
                 height: 1.2rem;
-                color: $secondary-4;
+                color: grey;
                 padding: 0;
                 &:hover, &:focus{
-                    color: $primary-4;
+                    color: black;
                 }
             }
             .ui-calendar .ui-datepicker{
@@ -158,7 +149,7 @@ ng-component{
             position:absolute;
             right: 2px;
             top: .6rem;
-            color: $tertiary-1;
+            color: black;
             &::before{
                 background-size: 15px 15px;
                 height: 15px;
@@ -176,12 +167,12 @@ ng-component{
        
         .ui-sortable-column-icon {
             font-size: 1.2rem;
-            color: $primary-2;
+           /*  color: black; */
             position:absolute;
             right: 6px;
             top: .6rem;
             &:hover, &:focus{
-                color: $primary-4;
+                color: grey;
             }
         }
         .fa-sort:before, .fa-unsorted:before {
@@ -190,18 +181,18 @@ ng-component{
         .fa-sort:after, .fa-unsorted:after {
             content: "\f175";;
         }
-        .fa-sort-asc:before,.fa-sort-asc:after {
-            color: $primary-5;
+  /*       .fa-sort-asc:before,.fa-sort-asc:after {
+            color: black;
             &:hover{
-                color: $primary-4;
+                color: grey;
             }
         }
         .fa-sort-desc:before,.fa-sort-desc:after {
-            color: $primary-5;
+            color: black;
             &:hover{
-                color: $primary-4;
+                color: grey;
             }
-        }
+        } */
     }
     tr.ui-expanded-row-content {
         background: inherit;
@@ -231,8 +222,7 @@ ng-component{
         width: 40px;
     }
     td:not(.dropdown) .ui-cell-data,
-    td:not(.dropdown) > span,
-    td:not(.dropdown) > p-cellEditor > span {
+    td:not(.dropdown) > span {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -258,6 +248,9 @@ ng-component{
         display: inline-block;
         font-size: 1rem;
     }
+}
+.ui-table .ui-table-loading-icon.fa-4x {
+    font-size: 4em;
 }
 .ui-expanded-row-content .scrollGrid td.dropdown .ui-cell-data, 
 .ui-expanded-row-content .ui-datatable td.dropdown .ui-cell-data,
@@ -285,17 +278,17 @@ ng-component{
     width: 20px;
     &.fa-chevron-circle-down:before {
     content: "\f0d7";
-    color: $primary-5;
+    color: black;
     }
     &.fa-chevron-circle-right:before{
         content: "\f0da";
-        color: $tertiary-1;;
+        color: black;
     }
 }
 .ui-table tr.ui-expanded-row-content .ui-table .ui-state-default, 
 .ui-datatable tr.ui-expanded-row-content .ui-datatable .ui-state-default, 
 .scrollGrid tr.ui-expanded-row-content .ui-datatable .ui-state-default {
-    background-color: $secondary-5;
+    background-color: #fff;
     color: #555;
 }
 
@@ -312,20 +305,20 @@ ng-component{
     min-height: 30px;
 }
 .ui-widget-header {
-    &:not(.ui-editor-toolbar){
-        background: $primary-2;
-    }
+   /*  &:not(.ui-editor-toolbar){
+        background: black;
+    } */
     border: none;
     text-align: left;
-    color: #fff;
+    /* ß */
     &.ui-paginator {
         font-size: 1rem;
         text-align: right;
         padding: .25em;
         .ui-paginator-page.ui-state-active {
-            background: $secondary-1;
+           /*  background: lightgrey;
             color: #ffffff;
-            border-color: #fff;
+            border-color: #fff; */
         }
         &.ui-paginator-top {
             top: 0;
@@ -338,7 +331,7 @@ ng-component{
 .ui-paginator .ui-paginator-icon::before{
     height: .8rem;
     width: .8rem;
-    background-color: white;
+   background-color: black;
     display: inline-block;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
@@ -350,8 +343,8 @@ ng-component{
 .ui-paginator .ui-paginator-first, 
 .ui-paginator .ui-paginator-prev, 
 .ui-paginator .ui-paginator-current{
-       background-color: transparent;
-    border: 1px solid #fff;
+       /* background-color: transparent;
+    border: 1px solid #fff; */
     height: 1.8rem;
     margin: 0;
     min-width: 1.8rem;
@@ -376,8 +369,8 @@ ng-component{
 
 .ui-paginator{
     a:not(.ui-state-disabled):not(.ui-state-active):hover {  
-        background-color: $primary-5; 
-        border-color: #fff;  
+        /* background-color: $primary-5; 
+        border-color: #fff;   */
     }
     .pi-step-backward::before {
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M34 2L16 20l18 18' opacity='.98' fill='none' stroke='%23006bc2' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10'/%3E%3Cpath d='M9 2v36' fill='none' stroke='%23006bc2' stroke-width='8' stroke-linecap='round' stroke-miterlimit='10'/%3E%3C/svg%3E");
@@ -410,7 +403,7 @@ ng-component{
 }
 .ui-table-header .btn-plain,
 .ui-datatable-header .btn-plain { 
-    color: #FFF; 
+    /* color: #FFF;  */
 }
 span.ui-cell-data img { 
 margin-right: 10px; 
@@ -419,7 +412,7 @@ margin-right: 10px;
 .scrollGrid .ui-datatable-thead > tr > th .gridFilterIcon.activeFilter::before,
 .ui-datatable .ui-datatable-thead > tr > th .gridFilterIcon.activeFilter::before,
 .ui-table .ui-table-thead > tr > th .gridFilterIcon.activeFilter::before { 
-    color: $primary-5; 
+    color: black; 
 }
 .ui-widget-header.ui-paginator .ui-dropdown-trigger.ui-state-default {
     border-left: 1px solid #999;
@@ -428,7 +421,7 @@ margin-right: 10px;
     padding-right: 28px;
 }
 .ui-table .ui-table-tbody > tr {
-    border-top: 1px solid #D5D5D5;
+    border-top: 1px solid lightgrey;
     &.ui-expanded-row-content{
         border: none;
     }
@@ -438,12 +431,12 @@ margin-right: 10px;
 }
 
 .ui-table .ui-table-tbody>tr.even{
-    background-color: $primary-3;
+    background-color: lightgrey;
     &.ui-state-highlight {
-        background-color: $primary-6;
+        background-color: grey;
         color: inherit;
         &+ tr.ui-expanded-row-content {
-            background: $primary-6;
+            background: lightgrey;
             border-bottom: 1px solid #fff;
         }   
     }
@@ -454,10 +447,10 @@ margin-right: 10px;
 .ui-table .ui-table-tbody>tr.odd{
     background-color: #fff;
     &.ui-state-highlight {
-        background-color: $primary-6;
+        background-color: lightgrey;
         color: inherit;
         &+ tr.ui-expanded-row-content {
-            background: $primary-6;
+            background: lightgrey;
             border-bottom: 1px solid #fff;
         }
     }
@@ -466,78 +459,13 @@ margin-right: 10px;
     }
 }
 .ui-state-highlight a { 
-    color: #0275d8;
+    /* color: #0275d8; */
 }
 
 .ui-table .ui-table-thead > tr > th, .ui-table .ui-table-tfoot > tr > td {
-    background-color: $tertiary-2;
+    background-color: lightgrey;
 }
 
 .ui-table td.wrapGridValue>span{
     white-space: normal;
-}
-
-.buttonGroup.tableHeaderButton {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    z-index: 1;
-    padding: 0;
-}
-
-.buttonGroup.tableHeaderButton button.btn-plain {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-.buttonGroup.tableHeaderButton button.btn-plain:hover {
-    color: #d9edfd;
-}
-
-button.btn-plain.fa.fa-plus {}
-
-.buttonGroup.tableHeaderButton button.btn-plain:hover:before {
-    text-decoration: none;
-}
-
-.buttonGroup.tableHeaderButton button.btn-plain:hover span {
-    text-decoration: underline;
-}
-
-.buttonGroup.tableHeaderButton {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    z-index: 1;
-    padding: 0;
-    button.btn-plain {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.1rem;
-        &:hover {
-            color: #d9edfd;
-            &::before {
-                text-decoration: none;
-            }
-            span {
-                text-decoration: underline;
-            }
-        }
-    }
-}
- 
-.withAddRow {
-    .ui-widget-header.ui-paginator{
-        .ui-paginator-bottom {
-            padding-right: 100px;
-        }
-        .ui-paginator-top {
-            right: 100px;
-        }
-    }
-}
- 
-nm-table {
-    position: relative
 }

@@ -35,12 +35,12 @@
         white-space: nowrap;
         width: auto;
         margin-right: .4rem;
-        border-left: 1px solid $primary-2;
-        border-right: 1px solid $primary-2;
+        border-left: 1px solid lightgrey;
+        border-right: 1px solid lightgrey;
         border-top-color: transparent;
         border-bottom-color: transparent;
         &:hover{
-            background: $primary-4;
+            background: grey;
             color: #fff;
             text-decoration: none;
         }
@@ -59,10 +59,10 @@
             padding: 0 1rem 0 1rem;
             background: #d9edfd;
             border-top-color: transparent;
-            border-left: 1px solid $primary-2;
-            border-right: 1px solid $primary-2;
+            border-left: 1px solid lightgrey;
+            border-right: 1px solid lightgrey;
             border-bottom-color: transparent;
-            color: $primary-4;
+            color: black;
             text-align: left;
             white-space: nowrap;
             width: auto;
@@ -77,19 +77,19 @@
                 float: right;
                 padding-left: 1rem;
                 content: "\f0da";
-                color: #669fe2;
+                color: #fff;
                 font-size: 1.5rem;
                 line-height: 1;
             }
         }
         &.active{
             button.dropdownTrigger {
-                background: $primary-5;
+                background: grey;
                 color: #fff;
                 border-bottom: 0px solid #eee;            
                 &::after {
-                    background: $primary-5;
-                    border-color: $primary-5;
+                    background: black;
+                    border-color: black;
                     color: #fff;
                     border-bottom: 1px solid transparent;
                 }
@@ -97,14 +97,14 @@
         }
         &:hover{
             button.dropdownTrigger {
-                background: $primary-4;
+                background: grey;
                 color: #fff;
                 border-bottom: 1px solid transparent;            
                 &::after {
-                    background: $primary-4;
-                    border-color: $primary-4;
+                    background: black;
+                    border-color: black;
                     color: #fff;
-                    border-bottom: 0px solid $primary-4;
+                    border-bottom-width: 0;
                     content: "\f0d7";              
                 }
             }
@@ -116,7 +116,7 @@
         }
         .dropdownContent{
             max-height: 0;
-            background: #fcf6d9;
+            background: #fff;
             overflow-y: auto;
             min-width: 130%;
             position: absolute;
@@ -124,24 +124,24 @@
             transition: max-height .7s, opacity .2s;
             top: 30px;
             transition-timing-function: ease-in-out;
-            border: 1px solid $primary-5;
+            border: 1px solid grey;
             opacity: 0;
             nm-link:not(:last-child) a.menuLink {
-                border-bottom: 1px solid $primary-5;
+                border-bottom: 1px solid grey;
             }
             a.menuLink{
-                background: #fcf6d9;
+                background: #fff;
                 border: none;
                 padding: .3rem .5rem;
                 white-space: normal;
                 height: auto;
                 margin-right: 0;
                 &:hover, &:focus {
-                    background: $primary-4;
+                    background: grey;
                     color: #fff;
                 }
                 &.active {
-                    background: $primary-5;
+                    background: grey;
                     color: #fff;
                 }
             }
@@ -230,11 +230,11 @@
     }
     .scrollToTop {
         border-radius: .4rem .4rem 0 0;
-        background: $primary-2;
-        border: $primary-2;
+        background: lightgrey;
+        border: lightgrey;
        &:hover {
-            background: $primary-1;
-            border: $primary-1;
+            background: grey;
+            border: grey;
             color: #fff;
         }
     }
@@ -242,7 +242,7 @@
 
 @media screen and (min-width: 576px)  {
     .globalNav{
-        border-bottom: 1px solid $primary-2;
+        border-bottom: 1px solid lightgrey;
         background: #fff;
         .ui-panelmenu-panel:hover .hassubmenu.ui-panelmenu-header {
             &+ .ui-panelmenu-content-wrapper {
@@ -269,6 +269,7 @@
             display: flex;
             flex: 1;
             .ui-panelmenu {
+               
                 display: flex;
                 flex: 1;
                 margin-bottom: 0;
@@ -276,11 +277,14 @@
                     flex: 1;
                     display: flex;
                     margin-bottom: 0;
+                    max-width: 25%;
                     .ui-widget.ui-panelmenu-header {
                         display: flex;
                         flex: 1;
                         .ui-panelmenu-header-link {
                             flex: 1;
+                            border-right: 1px solid lightgrey;
+                            padding: .5rem .5rem .5rem 1rem;
                         }
                         .ui-menuitem-text {
                             white-space: nowrap;
