@@ -420,42 +420,50 @@ margin-right: 10px;
 .ui-paginator .ui-dropdown .ui-dropdown-label {
     padding-right: 28px;
 }
-.ui-table .ui-table-tbody > tr {
-    border-top: 1px solid lightgrey;
-    &.ui-expanded-row-content{
-        border: none;
-    }
-}
-.ui-table .ui-table-tbody > tr.ui-state-highlight {
-    border-bottom: 1px solid #fff;
-}
+.ui-table {
 
-.ui-table .ui-table-tbody>tr.even{
-    background-color: lightgrey;
-    &.ui-state-highlight {
-        background-color: grey;
-        color: inherit;
-        &+ tr.ui-expanded-row-content {
-            background: lightgrey;
-            border-bottom: 1px solid #fff;
-        }   
-    }
-    + tr.ui-expanded-row-content {
-        background: $primary-3;
-    }
-}
-.ui-table .ui-table-tbody>tr.odd{
-    background-color: #fff;
-    &.ui-state-highlight {
-        background-color: lightgrey;
-        color: inherit;
-        &+ tr.ui-expanded-row-content {
-            background: lightgrey;
-            border-bottom: 1px solid #fff;
+    .ui-table-tbody > tr {
+        border-top: 1px solid lightgrey;
+        &.ui-expanded-row-content{
+            border: none;
         }
     }
-    + tr.ui-expanded-row-content {
-        background: #fff;
+    .ui-table-tbody > tr.ui-state-highlight {
+        border-bottom: 1px solid #fff;
+    }
+
+    .ui-table-tfoot>tr>td,
+    .ui-table-thead>tr>th {
+        background-color: #e8e5e5;
+    }
+
+    .ui-table-tbody>tr.even{
+        background-color: lightgrey;
+        &.ui-state-highlight {
+            background-color: grey;
+            color: inherit;
+            &+ tr.ui-expanded-row-content {
+                background: lightgrey;
+                border-bottom: 1px solid #fff;
+            }   
+        }
+        + tr.ui-expanded-row-content {
+            background: $primary-3;
+        }
+    }
+    .ui-table-tbody>tr.odd{
+        background-color: #fff;
+        &.ui-state-highlight {
+            background-color: lightgrey;
+            color: inherit;
+            &+ tr.ui-expanded-row-content {
+                background: lightgrey;
+                border-bottom: 1px solid #fff;
+            }
+        }
+        + tr.ui-expanded-row-content {
+            background: #fff;
+        }
     }
 }
 .ui-state-highlight a { 
